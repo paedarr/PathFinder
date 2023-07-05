@@ -38,6 +38,7 @@
     width: 100%;
     display: block;
     margin: auto;
+    border: 1px maroon solid;
 }
 
 #confirmInitialChoice{
@@ -93,6 +94,10 @@
 }
 
 #adduInputBregisters{
+    display: none;
+}
+
+#adduSourceRegisters{
     display: none;
 }
 

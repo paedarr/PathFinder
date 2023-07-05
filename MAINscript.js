@@ -1,3 +1,4 @@
+var inputA, inputB, typeA, typeB, locRegister;
 
 function hidePopup() {
     var popup = document.getElementById("popup");
@@ -75,6 +76,8 @@ function Rinstruction(){
         var showAdduConfirmBtn = document.getElementById("adduConfirmBtn");
         var showAdduListA = document.getElementById("adduInputAregisters");
         var showAdduListB = document.getElementById("adduInputBregisters");
+        var showSourceList = document.getElementById("adduSourceRegisters");
+        showSourceList.style.display = "block";
         showAdduConfirmBtn.style.display = "block";
         showAdduTitle.style.display = "block";
         showAdduInputA.style.display = "block";
@@ -84,14 +87,22 @@ function Rinstruction(){
 
     
         showAdduConfirmBtn.addEventListener("click", function(){
-            var inputA = parseInt(document.getElementById("adduInputA").value);
-            var inputB = parseInt(document.getElementById("adduInputB").value);
-            var typeA = document.getElementById("adduInputAregisters").value;
-            var typeB = document.getElementById("adduInputBregisters").value;
+            inputA = parseInt(document.getElementById("adduInputA").value);
+            inputB = parseInt(document.getElementById("adduInputB").value);
+            typeA = document.getElementById("adduInputAregisters").value;
+            typeB = document.getElementById("adduInputBregisters").value;
+            locRegister = document.getElementById("adduSourceRegisters").value;
             console.log("A :", inputA);
             console.log("B :", inputB);
             console.log("type of A :", typeA);
             console.log("type of B :", typeB);
+            console.log("Source Reg: ", locRegister);
+
+            var startBtn = document.getElementById("startSIM");
+            startBtn.addEventListener("click", function(){
+                var currentA = document.getElementById("currentA");
+                currentA.style.animation = "first_move 5s ease-in-out forwards";
+            });
         });
 
         //--------------------------------------------------------

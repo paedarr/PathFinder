@@ -9,6 +9,7 @@
         <meta name="author" content="Paedar Rader">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="Prgstyle.css">
+        <link rel="stylesheet" href="nodesStyling.css">
     </head>
     <body>
         <div class="banner">
@@ -37,7 +38,27 @@
             <button id = "rtypeConfirm" onclick = "Rinstruction()">Next</button>
 
 
-            <label id = "adduInputTitle">Enter Values:</label>
+            <label id = "adduInputTitle">$rd, $rt, $rs</label>
+
+            <select name = "adduSourceRegisters" id = "adduSourceRegisters">
+                <option value = "$t0">$t0</option>
+                <option value = "$t1">$t1</option>
+                <option value = "$t2">$t2</option>
+                <option value = "$t3">$t3</option>
+                <option value = "$t4">$t4</option>
+                <option value = "$t5">$t5</option>
+                <option value = "$t6">$t6</option>
+                <option value = "$t7">$t7</option>
+                <option value = "$s0">$s0</option>
+                <option value = "$s1">$s1</option>
+                <option value = "$s2">$s2</option>
+                <option value = "$s3">$s3</option>
+                <option value = "$s4">$s4</option>
+                <option value = "$s5">$s5</option>
+                <option value = "$s6">$s6</option>
+                <option value = "$s7">$s7</option>
+            </select>
+
             <select name = "adduInputAregisters" id = "adduInputAregisters">
                 <option value = "$t0">$t0</option>
                 <option value = "$t1">$t1</option>
@@ -107,7 +128,9 @@
             <button id = "hidePopupbtn" onclick = "hidePopup()">Okay</button>
         </div>
         <div class = "mainzone">
+            <div id = "currentA">X</div>
             <img src = "images/datapathCustom.png" id = "THISIMFG">
+            <button id = "startSIM">Start</button>
         </div>
         <script src="MAINscript.js"></script>
     </body>
