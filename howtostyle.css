@@ -1,0 +1,67 @@
+.swiper {
+    width: 80%;
+    height: fit-content;
+}
+
+/*End of Swiper Styling*/
+
+.guideContent {
+    width: 95%;
+    background-color: orange;
+    display: block;
+    margin: auto;
+}
+
+.swiper-slide img {
+    width: 100%;
+    z-index: 1;
+    display: block;
+}
+
+#slide2Text {
+    position: absolute;
+    z-index: 99;
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
+    background-color: red;
+    font-size: 1vw;
+    font-family: mainFont;
+}
+
+#slide2Btn {
+    position: absolute;
+    z-index: 100;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background-color: orange;
+    font-size: 1vw;
+    font-family: mainFont;
+    opacity: 1;
+}
+
+#slide2BtnSpecial {
+    position: absolute;
+    z-index: 99;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background-color: blue;
+    font-size: 1vw;
+    font-family: mainFont;
+    opacity: 0;
+}
+
+#slide2HiddenTxt {
+    position: absolute;
+    z-index: 100;
+    top: 42.5%;
+    left: 44%;
+    /*translate is (x, y)*/
+    transform: translate(-44%, -42.5%);
+    background-color: green;
+    font-size: 1vw;
+    font-family: mainFont;
+    opacity: 0;
+}

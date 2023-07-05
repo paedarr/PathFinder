@@ -1,0 +1,125 @@
+.mainzone{
+    width: 100%;
+    display: block;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    padding-bottom: 50%;;
+}
+
+.popup {
+    position: fixed;
+    width: 50vw;
+    height: 30vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    z-index: 100;
+  }
+  
+
+#popupContent{
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+#hidePopupbtn{
+    display: block;
+    margin: auto;
+    font-size: 1vw;
+}
+
+#THISIMFG{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+#confirmInitialChoice{
+    opacity: 1;
+    z-index: 99;
+}
+
+#userInitialSelection{
+    opacity: 1;
+    z-index: 99;
+}
+
+#UIS{
+    opacity: 1;
+    z-index: 99;
+}
+
+/*Start of R Type Choices*/
+
+#rtypeChoiceTitle{
+    display: none;
+}
+
+#RtypeChoices{
+    display: none;
+}
+
+#rtypeConfirm{
+    display: none;
+}
+
+
+
+
+#adduInputTitle{
+    display: none;
+}
+
+#adduInputA{
+    display: none;
+}
+
+#adduInputB{
+    display: none;
+}
+
+#adduConfirmBtn{
+    display: none;
+}
+
+#adduInputAregisters{
+    display: none;
+}
+
+#adduInputBregisters{
+    display: none;
+}
+
+/*Start of I Type Choices*/
+
+#itypeChoiceTitle{
+    display: none;
+}
+
+#ItypeChoices{
+    display: none;
+}
+
+#itypeConfirm{
+    display: none;
+}
+
+/*Start of J Type Choices*/
+
+#jtypeChoiceTitle{
+    display: none;
+}
+
+#JtypeChoices{
+    display: none;
+}
+
+#jtypeConfirm{
+    display: none;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<!--Use Shift+Option+F to align code-->
+
+<head>
+    <title>How-To</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="A detailed, interactive datapath program built by Paedar Rader">
+    <meta name="keywords" content="MIPS Datapath, Datapath, Software">
+    <meta name="author" content="Paedar Rader">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="howtostyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!--Make changes to banner style...current is a placeholder-->
+    <div class="banner">
+        <a href="index.html" class="bnrBtns">Home</a>
+        <a href="datapath.html" class="bnrBtns">Interactive Graph</a>
+        <a href="howto.html" class="bnrBtns">Guide</a>
+        <a href="mainProgram.html" class="bnrBtns">Datapath</a>
+        <a href = "customProgram.html" class = "bnrBtns">Custom</a>
+    </div>
+    <p>Placeholder text. This is the guide page</p>
+    <div class="guideContent">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src = "howtoSlides/MIPShowtoSlide1.png" alt = "slide1"></div>
+                <div class="swiper-slide"><img src = "howtoSlides/MIPShowtoSlide2.png" alt = "slide2">
+                <p id = "slide2Text">The MIPS structure datapath represents the hardware implementation of the MIPS architecture. It illustrates the flow of data within the processor, including the registers, ALU (Arithmetic Logic Unit), control signals, and memory components. The datapath showcases how instructions are fetched, decoded, and executed, providing insights into the internal workings of a MIPS-based processor.</p>
+                <button id = "slide2Btn" type = "button" onclick = "changeOpacity1()">What?</button>
+                <button id = "slide2BtnSpecial" type = "button" onclick = "changeOpacity2()">Back</button>
+                <p id = "slide2HiddenTxt">The MIPS structure datapath is like the "brain" of a MIPS processor. It shows how information moves around inside the processor, like when instructions are read and processed. It helps us understand how a MIPS processor works on the inside, kind of like looking at the different parts and how they talk to each other to get things done.</p>
+                </div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src = "guideScript.js"></script>
+    <!--This is not my code, this is the swiper initilization-->
+<script>
+    const swiper = new Swiper('.swiper', {
+
+        loop: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+      });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+@font-face {
+    font-family: mainFont;
+    src: url(IBM_Plex_Sans/IBMPlexSans-Regular.ttf);
+  }
+
+body{
+    width: 100%;
+    background-color: gray;
+}
+
+.banner{
+    background: white;
+    font-family: mainFont;
+    padding: 0.5vw;
+}
+
+.bnrBtns{
+    background-color: aquamarine;
+    text-decoration: none;
+    color: #005073;
+    margin-right: 5vw;
+    padding: 0.3vw;
+}
+
+#bluebtn1{
+    font-family: mainFont;
+    background-color: white;
+    color: #005073;
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 2vw;
+    width: 10%;
+    margin-top: 20%;
+    padding: 0.5vw;
+    border: #005073 solid 2px;
+    border-radius: 1px;
+    box-shadow: 
+    0 0 0 1px white,
+    0 0 0 3px #005073;
+}
+
+#mainbtn{
+    font-family: mainFont;
+    background-color: white;
+    color: #005073;
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 2vw;
+    width: 10%;
+    margin-top: 5%;
+    padding: 0.5vw;
+    border: #005073 solid 2px;
+    border-radius: 1px;
+    box-shadow: 
+    0 0 0 1px white,
+    0 0 0 3px #005073;
+    text-decoration: none;
+}
+
+/*
+Color Scheming:
+
+Darker Aqua Blue: #005073
+White: #FFFFFF
+
+*/

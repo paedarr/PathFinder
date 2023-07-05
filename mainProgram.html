@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ADD</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="A detailed, interactive datapath program built by Paedar Rader">
+        <meta name="keywords" content="MIPS Datapath, Datapath, Software">
+        <meta name="author" content="Paedar Rader">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Prgstyle.css">
+    </head>
+    <body>
+        <div class="banner">
+            <a href="index.html" class="bnrBtns">Home</a>
+            <a href="datapath.html" class="bnrBtns">Interactive Graph</a>
+            <a href="howto.html" class="bnrBtns">Guide</a>
+            <a href="mainProgram.html" class="bnrBtns">Datapath</a>
+            <a href = "customProgram.html" class = "bnrBtns">Custom</a>
+        </div>
+        <div class = "popup" id = "popup">
+            <p id = "popupContent"><b>Welcome to the Datpath Page</b><br>This is some placeholder text to be changed when there is a<br>suitable description for this page.</p>
+            <label for = "userInitialSelection" id = "UIS">Select Instruction Type:<br></label>
+            <select name = "userInitialSelection" id = "userInitialSelection">
+                <option value = "Rtype">R-Type</option>
+                <option value = "Itype">I-Type</option>
+                <option value = "Jtype">J-Type</option>
+            </select>
+            <!----------------------------------->
+            <label id = "rtypeChoiceTitle">R-Type Instructions</label>
+            <select name = "RtypeChoices" id = "RtypeChoices">
+                <option value = "add">add</option>
+                <option value = "addu">addu</option>
+                <option value = "sub">sub</option>
+                <option value = "subu">subu</option>
+            </select>
+            <button id = "rtypeConfirm" onclick = "Rinstruction()">Next</button>
+
+
+            <label id = "adduInputTitle">Enter Values:</label>
+            <select name = "adduInputAregisters" id = "adduInputAregisters">
+                <option value = "$t0">$t0</option>
+                <option value = "$t1">$t1</option>
+                <option value = "$t2">$t2</option>
+                <option value = "$t3">$t3</option>
+                <option value = "$t4">$t4</option>
+                <option value = "$t5">$t5</option>
+                <option value = "$t6">$t6</option>
+                <option value = "$t7">$t7</option>
+                <option value = "$s0">$s0</option>
+                <option value = "$s1">$s1</option>
+                <option value = "$s2">$s2</option>
+                <option value = "$s3">$s3</option>
+                <option value = "$s4">$s4</option>
+                <option value = "$s5">$s5</option>
+                <option value = "$s6">$s6</option>
+                <option value = "$s7">$s7</option>
+            </select>
+            <input type = "number" id = "adduInputA">
+
+            <select name = "adduInputBregisters" id = "adduInputBregisters">
+                <option value = "$t0">$t0</option>
+                <option value = "$t1">$t1</option>
+                <option value = "$t2">$t2</option>
+                <option value = "$t3">$t3</option>
+                <option value = "$t4">$t4</option>
+                <option value = "$t5">$t5</option>
+                <option value = "$t6">$t6</option>
+                <option value = "$t7">$t7</option>
+                <option value = "$s0">$s0</option>
+                <option value = "$s1">$s1</option>
+                <option value = "$s2">$s2</option>
+                <option value = "$s3">$s3</option>
+                <option value = "$s4">$s4</option>
+                <option value = "$s5">$s5</option>
+                <option value = "$s6">$s6</option>
+                <option value = "$s7">$s7</option>
+            </select>
+            <input type = "number" id = "adduInputB">
+            <button id = "adduConfirmBtn" onclick = "hidePopup()">Confirm</button>
+
+            <!--======-->
+
+
+            <label id = "itypeChoiceTitle">I-Type Instructions</label>
+            <select name = "ItypeChoices" id = "ItypeChoices">
+                <option value = "lw">lw</option>
+                <option value = "lb">lb</option>
+                <option value = "lbu">lbu</option>
+            </select>
+            <button id = "itypeConfirm">Confirm</button>
+
+            <!--======-->
+
+            <label id = "jtypeChoiceTitle">J-Type Instructions</label>
+            <select name = "JtypeChoices" id = "JtypeChoices">
+                <option value = "j">j</option>
+                <option value = "jal">jal</option>
+            </select>
+            <button id = "jtypeConfirm">Confirm</button>
+
+
+            <button id = "confirmInitialChoice" onclick = "confirmFirstSelect()">Next</button>
+            
+            <!----------------------------------->
+            <!--This is to hide the popup, possibly change to a red 'X' image in upper right corner -->
+            <button id = "hidePopupbtn" onclick = "hidePopup()">Okay</button>
+        </div>
+        <div class = "mainzone">
+            <img src = "images/datapathCustom.png" id = "THISIMFG">
+        </div>
+        <script src="MAINscript.js"></script>
+    </body>
+</html>
