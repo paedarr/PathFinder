@@ -5,7 +5,8 @@ function hidePopup() {
     popup.style.opacity = 0;
 }
 
-function confirmFirstSelect(){
+
+function confirmFirstSelect() {
     var getEle = document.getElementById("userInitialSelection");
     var chosenOp = getEle.value;
     //chosenOp has user selection
@@ -15,7 +16,7 @@ function confirmFirstSelect(){
     hideTitle.style.display = "none";
     hideIniChoices.style.display = "none";
     hideIniButton.style.display = "none";
-    if (chosenOp == "Rtype"){
+    if (chosenOp == "Rtype") {
         var showTitle = document.getElementById("rtypeChoiceTitle");
         var showChoices = document.getElementById("RtypeChoices");
         var showBtn = document.getElementById("rtypeConfirm");
@@ -23,7 +24,7 @@ function confirmFirstSelect(){
         showChoices.style.display = "block";
         showBtn.style.display = "block";
     }
-    else if (chosenOp == "Itype"){
+    else if (chosenOp == "Itype") {
         var showTitle = document.getElementById("itypeChoiceTitle");
         var showChoices = document.getElementById("ItypeChoices");
         var showBtn = document.getElementById("itypeConfirm");
@@ -31,7 +32,7 @@ function confirmFirstSelect(){
         showChoices.style.display = "block";
         showBtn.style.display = "block";
     }
-    else if (chosenOp == "Jtype"){
+    else if (chosenOp == "Jtype") {
         var showTitle = document.getElementById("jtypeChoiceTitle");
         var showChoices = document.getElementById("JtypeChoices");
         var showBtn = document.getElementById("jtypeConfirm");
@@ -43,18 +44,18 @@ function confirmFirstSelect(){
 
 /*----------------------------------------*/
 
-function Rinstruction(){
+function Rinstruction() {
     //This is called upon clicking the confirm button, which also closes the popup
-   // var popup = document.getElementById("popup");
-   // popup.style.opacity = 0;
-    
+    // var popup = document.getElementById("popup");
+    // popup.style.opacity = 0;
+
     var getType = document.getElementById("RtypeChoices");
     var chosenType = getType.value;
 
-    if (chosenType == "add"){
+    if (chosenType == "add") {
 
     }
-    else if (chosenType == "addu"){
+    else if (chosenType == "addu") {
         /*  ADDU FORMAT
         Opcode RS RT RD SHAMT FUNC
         6      5  5  5   5     6
@@ -85,8 +86,8 @@ function Rinstruction(){
         showAdduListA.style.display = "block";
         showAdduListB.style.display = "block";
 
-    
-        showAdduConfirmBtn.addEventListener("click", function(){
+
+        showAdduConfirmBtn.addEventListener("click", function () {
             inputA = parseInt(document.getElementById("adduInputA").value);
             inputB = parseInt(document.getElementById("adduInputB").value);
             typeA = document.getElementById("adduInputAregisters").value;
@@ -99,9 +100,26 @@ function Rinstruction(){
             console.log("Source Reg: ", locRegister);
 
             var startBtn = document.getElementById("startSIM");
-            startBtn.addEventListener("click", function(){
-                var currentA = document.getElementById("currentA");
-                currentA.style.animation = "first_move 5s ease-in-out forwards";
+
+            var currentAIcon = document.getElementById("currentAIcon");
+            var currentBIcon = document.getElementById("currentBIcon");
+
+            startBtn.addEventListener("click", function () {
+                currentAIcon.style.animation = "first_move 5s ease-in-out forwards";
+                startBtn.style.display = "none";
+                
+                setTimeout(function() {
+                    currentBIcon.style.display = "block";
+                }, 2700);
+                //this number represents 2.7 seconds of the animation, where the second current shows up
+
+                currentBIcon.style.animation = "currentB_first 5s ease-in-out forwards";
+
+                var nextBtn1 = document.getElementById("nextSim");
+                nextBtn1.style.display = "block";
+                nextBtn1.addEventListener("click", function () {
+
+                });
             });
         });
 
@@ -109,10 +127,10 @@ function Rinstruction(){
 
 
     }
-    else if (chosenType == "sub"){
+    else if (chosenType == "sub") {
 
     }
-    else if (chosenType == "subu"){
+    else if (chosenType == "subu") {
 
     }
 }
