@@ -98,11 +98,25 @@ function Rinstruction() {
             console.log("type of A :", typeA);
             console.log("type of B :", typeB);
             console.log("Source Reg: ", locRegister);
+            //Type A = RS, Type B = RT, LocReg = RD
 
             var startBtn = document.getElementById("startSIM");
 
+            var infoBubble1 = document.getElementById("infoBubble1");
+            var infoBubble2 = document.getElementById("infoBubble2");
+
+            var typeABin = checkRegister(typeA);
+            var typeBBin = checkRegister(typeB);
+            var typeDestBin = checkRegister(locRegister);
+            
+            var completeExpression = "000000" + typeABin + typeBBin + typeDestBin + "00000" + "100001";
+            console.log("OPERATION:", completeExpression);
+
             var currentAIcon = document.getElementById("currentAIcon");
             var currentBIcon = document.getElementById("currentBIcon");
+
+            infoBubble1.textContent = completeExpression;
+            infoBubble2.textContent = completeExpression;
 
             startBtn.addEventListener("click", function () {
                 currentAIcon.style.animation = "first_move 5s ease-in-out forwards";
