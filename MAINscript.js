@@ -119,6 +119,10 @@ function Rinstruction() {
             infoBubble2.textContent = completeExpression;
 
             startBtn.addEventListener("click", function () {
+                infoBubble1.style.display = "block";
+                infoBubble2.style.display = "block";
+
+                infoBubble1.style.animation = "move_first_bubble 4s ease-in-out forwards";
                 currentAIcon.style.animation = "first_move 5s ease-in-out forwards";
                 startBtn.style.display = "none";
                 

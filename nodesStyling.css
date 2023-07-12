@@ -1,3 +1,12 @@
+@keyframes showThoughtBubble{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 @keyframes first_move {
     from {
         opacity: 1;
@@ -33,6 +42,23 @@
     }
 }
 
+@keyframes move_first_bubble{
+    0%{
+        opacity: 0.5;
+    }
+    97%{
+        opacity: 0.5;
+        font-size: 1vw;
+        top: 25.5%;
+    }
+    100%{
+        opacity: 0;
+        left: 18%;
+        top: 27%;
+        font-size: 0.5vw;
+    }
+}
+
 #startSIM {
     display: block;
     margin: auto;
@@ -59,29 +85,41 @@
 }
 
 #infoBubble1 {
-    width: 20%;
-    height: 20%;
-    background-color: blue;
+    background-color: #08B4FF;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 0.5%;
     position: absolute;
     color: white;
-    top: 0;
-    left: 0;
     display: none;
     font-size: 1vw;
+    font-family: mainFont;
+    left: 1%;
+    top: 25.5%;
+    opacity: 0;
+    animation: showThoughtBubble 0.2s ease-in-out forwards;
 }
 
 #infoBubble2{
-    width: 20%;
-    height: 20%;
-    background-color: blue;
+    background-color: #08B4FF;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 0.5%;
     position: absolute;
     color: white;
-    top: 0;
-    left: 0;
     display: none;
     font-size: 1vw;
+    font-family: mainFont;
+    left: 11%;
+    top: 28%;
+    opacity: 0;
+    animation: showThoughtBubble 0.2s ease-in-out forwards;
 }
 
 #currentAIcon:hover ~ #infoBubble1{
+    display: block;
+}
+
+#currentBIcon:hover ~ #infoBubbleB{
     display: block;
 }
