@@ -1,0 +1,150 @@
+@keyframes item_disappear_opacity{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes item_show_opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes showThoughtBubble{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes first_move {
+    from {
+        opacity: 1;
+    }
+
+    97% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 20%;
+        opacity: 0;
+    }
+}
+
+@keyframes currentB_first {
+    50% {
+        top: 14.5%;
+    }
+
+    51% {
+        left: 14.9%;
+    }
+
+    97% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 21%;
+        top: 14.5%;
+        opacity: 0;
+    }
+}
+
+@keyframes move_first_bubble{
+    0%{
+        opacity: 1;
+    }
+    10%{
+        opacity: 1;
+        left: 5.7%;
+        top: 50%;
+        font-size: 1vw;
+    }
+    100%{
+        opacity: 0;
+        left: 8%;
+        top: 55%;
+        font-size: 0.1vw;
+    }
+}
+
+@keyframes IManimShow{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.5;
+    }
+}
+
+@keyframes IManimShowText{
+    from{
+        opacity: 0.000001;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes showTipsBox{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*Instruction Block Movements*/
+
+@keyframes moveOpcode_ini{
+    to{
+        left: 34%;
+        top: 42%;
+    }
+}
+
+@keyframes moveRS_ini{
+    to{
+        left: 34.2%;
+        top: 48.5%;
+    }
+}
+
+@keyframes moveRT_ini{
+    to{
+        left: 34.2%;
+        top: 52%;
+    }
+}
+
+@keyframes moveRD_ini{
+    to{
+        left: 34.2%;
+        top: 65%;
+    }
+}
+
+@keyframes moveShamt_ini{
+    to{
+        left: 32.75%;
+        top: 75%;
+    }
+}
+
+@keyframes moveFunc_ini{
+    to{
+        left: 35.5%;
+        top: 75%;
+    }
+}

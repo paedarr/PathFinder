@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Prgstyle.css">
     <link rel="stylesheet" href="nodesStyling.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="instructionBlockStyles.css">
 </head>
 
 <body>
@@ -152,13 +154,23 @@
             <div id="MUDbox_third"></div>
             <div id="DMbox"></div>
             <div id="MUXbox_fourth"></div>
+            <div id = "SFTLFT2JUMPbox"></div>
+            <div id = "MUXbox_fifth"></div>
             <!--Start of Text Nodes-->
+            <!--=========-->
+            <!--for r type-->
             <p id="instr_32to26">Instruction [31-26]</p>
             <p id="instr_25to21">Instruction [25-21]</p>
             <p id="instr_20to16">Instruction [20-16]</p>
             <p id="instr_15to11">Instruction [15-11]</p>
             <p id="instr_15to0">Instruction [15-0]</p>
+            <p id = "instr_5to0">Instruction [5-0]</p>
+            <!--for jump-->
+            <p id = "instr_25to0">Insrtruction [25-0]</p>
+            <p id = "pcplus4_31to28">PC+4 [31-28]</p>
+            <p id = "jumpadd_31to0">Jump Address [31-0]</p>
             <!--control text nodes-->
+            <p id="jump_textCT">Jump</p>
             <p id="regdest_textCT">RegDst</p>
             <p id="branch_textCT">Branch</p>
             <p id="memread_textCT">MemRead</p>
@@ -167,15 +179,29 @@
             <p id="memwrite_textCT">MemWrite</p>
             <p id="alusrc_textCT">ALUSrc</p>
             <p id="regwrite_textCT">RegWrite</p>
+            <p id = "tipsBox"></p>
+            <!--START OF INSTRUCTION BLOCKS FOR VISUAL REPRESENTATION-->
+            <div class = "instruction_block_structure">
+                <p id = "opcode_block">123456</p>
+                <p id = "rs_block">12345</p>
+                <p id = "rt_block">12345</p>
+                <p id = "rd_block">12345</p>
+                <p id = "shamt_block">12345</p>
+                <p id = "func_block">12345</p>
+            </div>
         </div>
         <img src="images/datapathCustom.png" id="THISIMFG">
     </div>
     <div class="mainButtons">
         <button id="startSIM">Start</button>
         <button id="nextSim">Next</button>
+        <button id = "sim_3">Next</button>
     </div>
     <script src="MAINscript.js"></script>
     <script src="checkRegisters.js"></script>
+    <script src="textcolors_Switch.js"></script>
+    <script src="adjustBlocks.js"></script>
+    <script src="animation_scripting.js"></script>
 </body>
 
 </html>

@@ -146,8 +146,37 @@ function Rinstruction() {
                     IMboxTEXT.style.animation = "IManimShowText 0.5s ease-in-out forwards";
                 }, 9000);
 
-                nextBtn1.addEventListener("click", function () {
+                    //This Activated Text is for ADDU R type -----
+                    var activatedText1 = activateText(document.getElementById("instr_32to26"));
+                    var activatedText2 = activateText(document.getElementById("instr_25to21"));
+                    var activatedText3 = activateText(document.getElementById("instr_20to16"));
+                    var activatedText4 = activateText(document.getElementById("instr_15to11"));
+                    var activatedText5 = activateText(document.getElementById("instr_15to0"));
+                    //-----------------------------------
 
+                nextBtn1.addEventListener("click", function () {
+                    var tipsBox = document.getElementById("tipsBox");
+                    var IMboxTEXT = document.getElementById("IMboxTEXT");
+                    IMboxTEXT.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                    tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control.";
+                    tipsBox.style.animation = "showTipsBox 1s ease-in-out forwards";
+                    nextBtn1.style.display = "none";
+                    rtypeaddu("000000", typeABin, typeBBin, typeDestBin, "00000", "100001");
+                    showInstructionBlocks();
+                    setTimeout(function(){
+                        moveBlocks_initial_rtype();
+                    }, 3000);
+                    setTimeout(function(){
+                        var sim_3 = document.getElementById("sim_3");
+                        sim_3.style.display = "block";
+                    }, 3000);
+                });
+
+                var sim_3 = document.getElementById("sim_3");
+                sim_3.addEventListener("click", function () {
+                    var tipsBox = document.getElementById("tipsBox");
+                    tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                    tipsBox.textContent = "Since the program knows it's an R-Type Instruction, it can skip the jump line. Next, the Control is going to evaluate what kind of specific instruction it is, based on bits 31-26, ";
                 });
             });
         });

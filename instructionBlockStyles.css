@@ -1,0 +1,46 @@
+.instruction_block_structure{
+    font-family: mainFont;
+    text-align: center;
+    font-size: 0.7vw;
+}
+
+#opcode_block, #rs_block, #rt_block, #rd_block, #shamt_block, #func_block{
+    display: none;
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.7);
+    padding: 0.2vw;
+    border: 0.2vw solid black;
+    color: white;
+    z-index: 100;
+    /*make each block a specific color!!!*/
+}
+
+#opcode_block{
+    left: 19.9%;
+    top: 59%;
+}
+
+#rs_block{
+    left: 23%;
+    top: 59%;
+}
+
+#rt_block{
+    left: 25.6%;
+    top: 59%;
+}
+
+#rd_block{
+    left: 28.3%;
+    top: 59%;
+}
+
+#shamt_block{
+    left: 31%;
+    top: 59%;
+}
+
+#func_block{
+    left: 33.7%;
+    top: 59%;
+}
