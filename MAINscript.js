@@ -103,38 +103,49 @@ function Rinstruction() {
             var startBtn = document.getElementById("startSIM");
 
             var infoBubble1 = document.getElementById("infoBubble1");
-            var infoBubble2 = document.getElementById("infoBubble2");
 
             var typeABin = checkRegister(typeA);
             var typeBBin = checkRegister(typeB);
             var typeDestBin = checkRegister(locRegister);
-            
+
             var completeExpression = "000000" + typeABin + typeBBin + typeDestBin + "00000" + "100001";
             console.log("OPERATION:", completeExpression);
 
             var currentAIcon = document.getElementById("currentAIcon");
             var currentBIcon = document.getElementById("currentBIcon");
 
-            infoBubble1.textContent = completeExpression;
-            infoBubble2.textContent = completeExpression;
+            infoBubble1.textContent = "0x10000000";
 
             startBtn.addEventListener("click", function () {
                 infoBubble1.style.display = "block";
-                infoBubble2.style.display = "block";
-
-                infoBubble1.style.animation = "move_first_bubble 4s ease-in-out forwards";
-                currentAIcon.style.animation = "first_move 5s ease-in-out forwards";
                 startBtn.style.display = "none";
-                
-                setTimeout(function() {
-                    currentBIcon.style.display = "block";
-                }, 2700);
+
+                infoBubble1.style.animation = "move_first_bubble 1s ease-in-out forwards";
+                setTimeout(function () {
+                    currentAIcon.style.animation = "first_move 5s ease-in-out forwards";
+                    setTimeout(function () {
+                        currentBIcon.style.display = "block";
+                        currentBIcon.style.animation = "currentB_first 5s ease-in-out forwards";
+                    }, 2700);
+                }, 1000);
+
                 //this number represents 2.7 seconds of the animation, where the second current shows up
 
-                currentBIcon.style.animation = "currentB_first 5s ease-in-out forwards";
-
                 var nextBtn1 = document.getElementById("nextSim");
-                nextBtn1.style.display = "block";
+                setTimeout(function () {
+                    nextBtn1.style.display = "block";
+                    var IMinfo = document.getElementById("IMbox");
+                    IMinfo.style.animation = "IManimShow 0.5s ease-in-out forwards";
+                    var IMboxTEXT = document.getElementById("IMboxTEXT");
+                    var spanEleNew = document.createElement("span");
+                    spanEleNew.style.fontSize = "0.6vw";
+                    spanEleNew.style.color = "orangered";
+                    spanEleNew.textContent = completeExpression;
+                    IMboxTEXT.appendChild(document.createTextNode("The IM then takes the memory address, and retrieves the instruction stored within. In this case, that instruction is: "))
+                    IMboxTEXT.appendChild(spanEleNew);
+                    IMboxTEXT.style.animation = "IManimShowText 0.5s ease-in-out forwards";
+                }, 9000);
+
                 nextBtn1.addEventListener("click", function () {
 
                 });

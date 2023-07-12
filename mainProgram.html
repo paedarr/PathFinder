@@ -131,11 +131,46 @@
         <button id="hidePopupbtn" onclick="hidePopup()">Okay</button>
     </div>
     <div class="mainzone">
-            <img src="images/MIPSdataIcon.png" id="currentAIcon">
-            <img src="images/MIPSdataIcon.png" id="currentBIcon">
-            <p id = "infoBubble1"></p>
-            <p id = "infoBubble2"></p>
+        <img src="images/MIPSdataIcon.png" id="currentAIcon">
+        <img src="images/MIPSdataIcon.png" id="currentBIcon">
+        <p id="infoBubble1"></p>
+        <!--Start of Invisible Boxes to Use as Locations of Nodes-->
+        <div class="nodesMain">
+            <div id="PCbox"></div>
+            <div id="IMbox"></div>
+            <p id="IMboxTEXT"></p>
+            <div id="ADDbox_first"></div>
+            <div id="MUXbox_first"></div>
+            <div id="CTRLbox"></div>
+            <div id="RFbox"></div>
+            <div id="SIGNEXDbox"></div>
+            <div id="ALUCTRLbox"></div>
+            <div id="MUXbox_second"></div>
+            <div id="SHFTLFT2box"></div>
+            <div id="ADDbox_second"></div>
+            <div id="ALUbox"></div>
+            <div id="MUDbox_third"></div>
+            <div id="DMbox"></div>
+            <div id="MUXbox_fourth"></div>
+            <!--Start of Text Nodes-->
+            <p id="instr_32to26">Instruction [31-26]</p>
+            <p id="instr_25to21">Instruction [25-21]</p>
+            <p id="instr_20to16">Instruction [20-16]</p>
+            <p id="instr_15to11">Instruction [15-11]</p>
+            <p id="instr_15to0">Instruction [15-0]</p>
+            <!--control text nodes-->
+            <p id="regdest_textCT">RegDst</p>
+            <p id="branch_textCT">Branch</p>
+            <p id="memread_textCT">MemRead</p>
+            <p id="memtoreg_textCT">MemToReg</p>
+            <p id="aluop_textCT">ALUOp</p>
+            <p id="memwrite_textCT">MemWrite</p>
+            <p id="alusrc_textCT">ALUSrc</p>
+            <p id="regwrite_textCT">RegWrite</p>
+        </div>
         <img src="images/datapathCustom.png" id="THISIMFG">
+    </div>
+    <div class="mainButtons">
         <button id="startSIM">Start</button>
         <button id="nextSim">Next</button>
     </div>

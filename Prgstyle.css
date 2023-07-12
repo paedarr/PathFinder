@@ -4,7 +4,6 @@
     margin: auto;
     background-color: white;
     position: relative;
-    padding-bottom: 50%;;
 }
 
 .popup {
@@ -20,6 +19,9 @@
     justify-content: center;
     background-color: yellow;
     z-index: 100;
+
+    /*CHANGE BACK WHEN DONE*/
+    display: none;
   }
   
 

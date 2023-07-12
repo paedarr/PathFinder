@@ -24,7 +24,7 @@
 
 @keyframes currentB_first {
     50% {
-        top: 7.5%;
+        top: 14.5%;
     }
 
     51% {
@@ -37,27 +37,47 @@
 
     100% {
         left: 21%;
-        top: 7.5%;
+        top: 14.5%;
         opacity: 0;
     }
 }
 
 @keyframes move_first_bubble{
     0%{
-        opacity: 0.5;
+        opacity: 1;
     }
-    97%{
-        opacity: 0.5;
+    10%{
+        opacity: 1;
+        left: 5.7%;
+        top: 50%;
         font-size: 1vw;
-        top: 25.5%;
     }
     100%{
         opacity: 0;
-        left: 18%;
-        top: 27%;
-        font-size: 0.5vw;
+        left: 8%;
+        top: 55%;
+        font-size: 0.1vw;
     }
 }
+
+@keyframes IManimShow{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.5;
+    }
+}
+
+@keyframes IManimShowText{
+    from{
+        opacity: 0.000001;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 
 #startSIM {
     display: block;
@@ -71,7 +91,7 @@
     position: absolute;
     z-index: 99;
     left: 7.9%;
-    top: 29.2%;
+    top: 56%;
 }
 
 #currentBIcon {
@@ -81,7 +101,7 @@
     position: absolute;
     z-index: 98;
     left: 14.9%;
-    top: 29.2%;
+    top: 56%;
 }
 
 #infoBubble1 {
@@ -94,32 +114,286 @@
     display: none;
     font-size: 1vw;
     font-family: mainFont;
-    left: 1%;
-    top: 25.5%;
+    left: 5.7%;
+    top: 50%;
     opacity: 0;
     animation: showThoughtBubble 0.2s ease-in-out forwards;
-}
-
-#infoBubble2{
-    background-color: #08B4FF;
-    border: 3px solid black;
-    border-radius: 5px;
-    padding: 0.5%;
-    position: absolute;
-    color: white;
-    display: none;
-    font-size: 1vw;
-    font-family: mainFont;
-    left: 11%;
-    top: 28%;
-    opacity: 0;
-    animation: showThoughtBubble 0.2s ease-in-out forwards;
+    -webkit-animation: showThoughtBubble 0.2s ease-in-out forwards;
+    -moz-animation: showThoughtBubble 0.2s ease-in-out forwards;
+    -o-animation: showThoughtBubble 0.2s ease-in-out forwards;
 }
 
 #currentAIcon:hover ~ #infoBubble1{
     display: block;
 }
 
-#currentBIcon:hover ~ #infoBubbleB{
+#nextSim{
+    display: none;
+    margin: auto; 
+}
+
+p#instr_32to26, p#instr_25to21, p#instr_20to16, p#instr_15to11, p#instr_15to0{
+    font-family: mainFont;
+    position: absolute;
+    font-size: 0.8vw;
+    z-index: 90;
+}
+
+#instr_32to26{
+    left: 36%;
+    top: 35.5%;
+}
+
+p#instr_25to21{
+    left: 36%;
+    top: 47.7%;
+}
+
+p#instr_20to16{
+    left: 36%;
+    top: 51%;
+}
+
+p#instr_15to11{
+    font-size: 0.5vw;
+    left: 36%;
+    top: 68.5%;
+}
+
+p#instr_15to0{
+    left: 36%;
+    top: 79%;
+}
+
+p#regdest_textCT, p#jump_textCT, p#branch_textCT, p#memread_textCT, p#memtoreg_textCT, p#aluop_textCT, p#memwrite_textCT, p#alusrc_textCT, p#regwrite_textCT{
+    font-family: mainFont;
+    font-size: 0.8vw;
+    position: absolute;
+    color: blue;
+    opacity: 0.2;
+}
+
+#regdest_textCT{
+    left: 42%;
+    top: 23%;
+}
+
+#branch_textCT{
+    left: 50%;
+    top: 29.5%;
+}
+
+#memread_textCT{
+    left: 50%;
+    top: 33%;
+}
+
+#memtoreg_textCT{
+    left: 50%;
+    top: 35.5%;
+}
+
+#aluop_textCT{
+    left: 50%;
+    top: 37.7%; 
+}
+
+#memwrite_textCT{
+    left: 50%;
+    top: 39.9%; 
+}
+
+#alusrc_textCT{
+    left: 50%;
+    top: 41.8%; 
+}
+
+#regwrite_textCT{
+    left: 50%;
+    top: 43.6%; 
+}
+
+/*==========================================================*/
+/*Start of Actual Node Styling*/
+
+#PCbox{
     display: block;
+    position: absolute;
+    top: 52.25%;
+    left: 7.5%;
+    width: 3.5%;
+    height: 12.5%;
+    z-index: 50;
+}
+
+#IMbox{
+    display: block;
+    position: absolute;
+    top: 51.2%;
+    left: 21.6%;
+    width: 8.5%;
+    height: 14.6%;
+    z-index: 50;
+    background-color: goldenrod;
+    opacity: 0;
+}
+
+#IMboxTEXT{
+    font-family: mainFont;
+    position: absolute;
+    display: block;
+    font-size: 0.85vw;
+    background-color: #08B4FF;
+    padding: 0.3vw;
+    color: white;
+    border: 3px solid black;
+    top: 37%;
+    left: 19%;
+    width: 12%;
+    z-index: 99;
+    opacity: 0.000001;
+}
+
+#ADDbox_first{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 21.6%;
+    width: 6%;
+    height: 14%;
+    z-index: 50;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#MUXbox_first{
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 39.83%;
+    width: 3.5%;
+    height: 14%;
+    z-index: 50;
+    border-radius: 20px;
+}
+
+#CTRLbox{
+    display: block;
+    position: absolute;
+    top: 30.8%;
+    left: 44%;
+    width: 5.3%;
+    height: 17%;
+    z-index: 50;
+    border-radius: 30px;
+}
+
+#RFbox{
+    display: block;
+    position: absolute;
+    top: 52.2%;
+    left: 50%;
+    width: 8.5%;
+    height: 14.6%;
+    z-index: 50;
+}
+
+#SIGNEXDbox{
+    display: block;
+    position: absolute;
+    top: 78.7%;
+    left: 49%;
+    width: 5%;
+    height: 8.7%;
+    z-index: 50;
+    border-radius: 30px;
+}
+
+#ALUCTRLbox{
+    display: block;
+    position: absolute;
+    top: 84.7%;
+    left: 56%;
+    width: 4%;
+    height: 8.7%;
+    z-index: 50;
+    border-radius: 30px;
+}
+
+#MUXbox_second{
+    display: block;
+    position: absolute;
+    top: 64%;
+    left: 61.5%;
+    width: 3.5%;
+    height: 14%;
+    z-index: 50;
+    border-radius: 20px;
+}
+
+#SHFTLFT2box{
+    display: block;
+    position: absolute;
+    top: 20.4%;
+    left: 61%;
+    width: 3.2%;
+    height: 5.5%;
+    z-index: 50;
+    border-radius: 30px;
+}
+
+#ADDbox_second{
+    display: block;
+    position: absolute;
+    top: 12.9%;
+    left: 65%;
+    width: 7%;
+    height: 12.5%;
+    z-index: 50;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#ALUbox{
+    display: block;
+    position: absolute;
+    top: 58.5%;
+    left: 67.8%;
+    width: 7%;
+    height: 12.5%;
+    z-index: 50;
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+
+#MUDbox_third{
+    display: block;
+    position: absolute;
+    top: 10.5%;
+    left: 75.2%;
+    width: 3.5%;
+    height: 14%;
+    z-index: 50;
+    border-radius: 20px;
+}
+
+#DMbox{
+    display: block;
+    position: absolute;
+    top: 78.9%;
+    left: 76.1%;
+    width: 8.5%;
+    height: 14.6%;
+    z-index: 50;
+}
+
+#MUXbox_fourth{
+    display: block;
+    position: absolute;
+    top: 73%;
+    left: 87.85%;
+    width: 3.5%;
+    height: 14%;
+    z-index: 50;
+    border-radius: 20px;
 }
