@@ -223,11 +223,13 @@ p#instr_25to0, p#pcplus4_31to28, p#jumpadd_31to0, p#regdest_textCT, p#jump_textC
     display: block;
     position: absolute;
     top: 30.8%;
-    left: 44%;
-    width: 5.3%;
+    left: 44.85%;
+    width: 4%;
     height: 17%;
     z-index: 50;
-    border-radius: 30px;
+    border-radius: 50px;
+    background-color: red;
+    opacity: 0;
 }
 
 #RFbox{
@@ -367,7 +369,7 @@ p#instr_25to0, p#pcplus4_31to28, p#jumpadd_31to0, p#regdest_textCT, p#jump_textC
     display: block;
     background-color: yellowgreen;
     top: 75%;
-    left: 7%;
+    left: 6.2%;
     width: 25%;
     font-size: 1vw;
     color: white;

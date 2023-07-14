@@ -152,31 +152,40 @@ function Rinstruction() {
                     var activatedText3 = activateText(document.getElementById("instr_20to16"));
                     var activatedText4 = activateText(document.getElementById("instr_15to11"));
                     var activatedText5 = activateText(document.getElementById("instr_15to0"));
+                    var activatedText6 = activateText(document.getElementById("instr_5to0"));
                     //-----------------------------------
 
                 nextBtn1.addEventListener("click", function () {
                     var tipsBox = document.getElementById("tipsBox");
                     var IMboxTEXT = document.getElementById("IMboxTEXT");
                     IMboxTEXT.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
-                    tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control.";
+                    tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control, which will tell the rest of the program what kind of instruction is to be evaluated.";
                     tipsBox.style.animation = "showTipsBox 1s ease-in-out forwards";
                     nextBtn1.style.display = "none";
                     rtypeaddu("000000", typeABin, typeBBin, typeDestBin, "00000", "100001");
                     showInstructionBlocks();
                     setTimeout(function(){
                         moveBlocks_initial_rtype();
-                    }, 3000);
-                    setTimeout(function(){
-                        var sim_3 = document.getElementById("sim_3");
-                        sim_3.style.display = "block";
+                        setTimeout(function(){
+                            var sim_3 = document.getElementById("sim_3");
+                            sim_3.style.display = "block";
+                        }, 3000);
                     }, 3000);
                 });
-
                 var sim_3 = document.getElementById("sim_3");
                 sim_3.addEventListener("click", function () {
+                    var IMinfo = document.getElementById("IMbox");
+                    IMinfo.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
-                    tipsBox.textContent = "Since the program knows it's an R-Type Instruction, it can skip the jump line. Next, the Control is going to evaluate what kind of specific instruction it is, based on bits 31-26, ";
+                    tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                    tipsBox.textContent = "The first six bits are sent to the Control unit, which then tells it which paths and operations to execute in the program.";
+                    var opBlock = document.getElementById("opcode_block");
+                    opBlock.style.animation = "moveOpcode_second 3s ease-in-out forwards";
+                    setTimeout(function(){
+                        var ctrlBox = document.getElementById("CTRLbox");
+                        ctrlBox.style.animation = "onethird_show 1s ease-in-out forwards";
+                    }, 3000);
                 });
             });
         });

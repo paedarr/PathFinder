@@ -87,6 +87,15 @@
     }
 }
 
+@keyframes onethird_show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.3;
+    }
+}
+
 @keyframes IManimShowText{
     from{
         opacity: 0.000001;
@@ -146,5 +155,26 @@
     to{
         left: 35.5%;
         top: 75%;
+    }
+}
+
+@keyframes moveOpcode_second{
+    0%{
+        left: 34%;
+        top: 42%;
+        opacity: 1;
+    }
+    50%{
+        left: 34%;
+        top: 36.5%;
+        opacity: 1;
+    }
+    94%{
+        opacity: 1;
+    }
+    100%{
+        left: 42%;
+        top: 36.5%;
+        opacity: 0;
     }
 }

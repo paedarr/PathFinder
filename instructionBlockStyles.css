@@ -44,3 +44,22 @@
     left: 33.7%;
     top: 59%;
 }
+
+/*-----------------------*/
+/*FOR TESTING POSITIONING*/
+
+#test_block_special{
+    display: none;
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.7);
+    padding: 0.2vw;
+    border: 0.2vw solid black;
+    color: white;
+    z-index: 100;
+    font-family: mainFont;
+    text-align: center;
+    font-size: 0.7vw;
+    /*------*/
+    left: 42%;
+    top: 36.5%;
+}
