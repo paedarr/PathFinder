@@ -184,8 +184,6 @@ function Rinstruction() {
                     var opBlock = document.getElementById("opcode_block");
                     opBlock.style.animation = "moveOpcode_second 3s ease-in-out forwards";
                     setTimeout(function () {
-                        var ctrlBox = document.getElementById("CTRLbox");
-                        ctrlBox.style.animation = "onethird_show 1s ease-in-out forwards";
                         var ctrlTextBox = document.getElementById("CTRLboxTEXT");
                         ctrlTextBox.textContent = "The Control then tells the program what 'paths' need to be 'activated'."
                         ctrlTextBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
@@ -198,14 +196,30 @@ function Rinstruction() {
 
                 var sim_4 = document.getElementById("sim_4");
                 sim_4.addEventListener("click", function () {
+                    sim_4.style.display = "none";
+                    var ctrlTextBox = document.getElementById("CTRLboxTEXT");
+                    ctrlTextBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     var regdest_textCT = activateControl_text(document.getElementById("regdest_textCT"));
                     var aluop_textCT = activateControl_text(document.getElementById("aluop_textCT"));
                     var regwrite_textCT = activateControl_text(document.getElementById("regwrite_textCT"));
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
-                    tipsBox.textContent = "The Control has now told the program which 'paths' to use during execution, per the opcode."
+                    tipsBox.textContent = "The Control has now told the program which 'paths' to use during execution, per the opcode.";
+                    setTimeout(function(){
+                        var sim_5 = document.getElementById("sim_5");
+                        sim_5.style.display = "block";
+                    }, 1000);
+                });
 
+                var sim_5 = document.getElementById("sim_5");
+                sim_5.addEventListener("click", function () {
+                    var tipsBox = document.getElementById("tipsBox");
+                    tipsBox.textContent = "Then, the next 5 bits are read, which represent the reigster to read data from. In this case, the register is '" + typeABin + "', or " + typeA + ".";
+                    setTimeout(function(){
+                        var rs_block = document.getElementById("rs_block");
+                        rs_block.style.animation = "moveRs_second 4s ease-in-out forwards";
+                    }, 2000);
                 });
             });
         });

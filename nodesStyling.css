@@ -228,7 +228,7 @@ p#instr_25to0, p#pcplus4_31to28, p#jumpadd_31to0, p#regdest_textCT, p#jump_textC
     height: 17%;
     z-index: 50;
     border-radius: 50px;
-    background-color: red;
+    background-color: #08B4FF;
     opacity: 0;
 }
 
