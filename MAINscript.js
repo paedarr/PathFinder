@@ -146,14 +146,6 @@ function Rinstruction() {
                     IMboxTEXT.style.animation = "IManimShowText 0.5s ease-in-out forwards";
                 }, 9000);
 
-                    //This Activated Text is for ADDU R type -----
-                    var activatedText1 = activateText(document.getElementById("instr_32to26"));
-                    var activatedText2 = activateText(document.getElementById("instr_25to21"));
-                    var activatedText3 = activateText(document.getElementById("instr_20to16"));
-                    var activatedText4 = activateText(document.getElementById("instr_15to11"));
-                    var activatedText5 = activateText(document.getElementById("instr_15to0"));
-                    var activatedText6 = activateText(document.getElementById("instr_5to0"));
-                    //-----------------------------------
 
                 nextBtn1.addEventListener("click", function () {
                     var tipsBox = document.getElementById("tipsBox");
@@ -164,9 +156,19 @@ function Rinstruction() {
                     nextBtn1.style.display = "none";
                     rtypeaddu("000000", typeABin, typeBBin, typeDestBin, "00000", "100001");
                     showInstructionBlocks();
-                    setTimeout(function(){
+                    setTimeout(function () {
+                        var IMinfo = document.getElementById("IMbox");
+                        IMinfo.style.animation = "hide_opacity_fromhalf 0.5s ease-in-out forwards";
                         moveBlocks_initial_rtype();
-                        setTimeout(function(){
+                        //This Activated Text is for ADDU R type -----
+                        var activatedText1 = activateText(document.getElementById("instr_32to26"));
+                        var activatedText2 = activateText(document.getElementById("instr_25to21"));
+                        var activatedText3 = activateText(document.getElementById("instr_20to16"));
+                        var activatedText4 = activateText(document.getElementById("instr_15to11"));
+                        var activatedText5 = activateText(document.getElementById("instr_15to0"));
+                        var activatedText6 = activateText(document.getElementById("instr_5to0"));
+                        //-----------------------------------
+                        setTimeout(function () {
                             var sim_3 = document.getElementById("sim_3");
                             sim_3.style.display = "block";
                         }, 3000);
@@ -174,18 +176,36 @@ function Rinstruction() {
                 });
                 var sim_3 = document.getElementById("sim_3");
                 sim_3.addEventListener("click", function () {
-                    var IMinfo = document.getElementById("IMbox");
-                    IMinfo.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
+                    sim_3.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
-                    tipsBox.textContent = "The first six bits are sent to the Control unit, which then tells it which paths and operations to execute in the program.";
+                    tipsBox.textContent = "The first six bits are sent to the Control unit, which then tells it which paths and operations to execute in the program. Remember, that all of these steps are happening concurrently in reality, and this is just a step-by-step visualization.";
                     var opBlock = document.getElementById("opcode_block");
                     opBlock.style.animation = "moveOpcode_second 3s ease-in-out forwards";
-                    setTimeout(function(){
+                    setTimeout(function () {
                         var ctrlBox = document.getElementById("CTRLbox");
                         ctrlBox.style.animation = "onethird_show 1s ease-in-out forwards";
+                        var ctrlTextBox = document.getElementById("CTRLboxTEXT");
+                        ctrlTextBox.textContent = "The Control then tells the program what 'paths' need to be 'activated'."
+                        ctrlTextBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
                     }, 3000);
+                    setTimeout(function(){
+                        var sim_4 = document.getElementById("sim_4");
+                        sim_4.style.display = "block";
+                    }, 4000);
+                });
+
+                var sim_4 = document.getElementById("sim_4");
+                sim_4.addEventListener("click", function () {
+                    var regdest_textCT = activateControl_text(document.getElementById("regdest_textCT"));
+                    var aluop_textCT = activateControl_text(document.getElementById("aluop_textCT"));
+                    var regwrite_textCT = activateControl_text(document.getElementById("regwrite_textCT"));
+                    var tipsBox = document.getElementById("tipsBox");
+                    tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                    tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                    tipsBox.textContent = "The Control has now told the program which 'paths' to use during execution, per the opcode."
+
                 });
             });
         });

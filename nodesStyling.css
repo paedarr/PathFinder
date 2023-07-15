@@ -193,7 +193,7 @@ p#instr_25to0, p#pcplus4_31to28, p#jumpadd_31to0, p#regdest_textCT, p#jump_textC
     left: 19%;
     width: 12%;
     z-index: 99;
-    opacity: 0.000001;
+    opacity: 0;
 }
 
 #ADDbox_first{
@@ -229,6 +229,22 @@ p#instr_25to0, p#pcplus4_31to28, p#jumpadd_31to0, p#regdest_textCT, p#jump_textC
     z-index: 50;
     border-radius: 50px;
     background-color: red;
+    opacity: 0;
+}
+
+#CTRLboxTEXT{
+    font-family: mainFont;
+    position: absolute;
+    display: block;
+    font-size: 0.85vw;
+    background-color: #08B4FF;
+    padding: 0.3vw;
+    color: white;
+    border: 3px solid black;
+    top: 30%;
+    left: 42.3%;
+    width: 8%;
+    z-index: 99;
     opacity: 0;
 }
 

@@ -87,6 +87,15 @@
     }
 }
 
+@keyframes hide_opacity_fromhalf{
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
 @keyframes onethird_show{
     from{
         opacity: 0;

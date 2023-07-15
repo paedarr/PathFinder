@@ -69,6 +69,12 @@
     background-color: red;
 }
 
+#sim_4{
+    display: none;
+    margin: auto;
+    background-color: green;
+}
+
 /*Start of R Type Choices*/
 
 #rtypeChoiceTitle{
