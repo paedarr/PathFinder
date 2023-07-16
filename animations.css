@@ -212,3 +212,45 @@
         opacity: 0;
     }
 }
+
+@keyframes move_valueblock1_ini{
+    0%{
+        left: 58%;
+        top: 53.5%;
+    }
+    50%{
+        left: 63.8%;
+        top: 53.5%;
+    }
+    75%{
+        left: 63.8%;
+        top: 56.5%;
+    }
+    100%{
+        left: 67.3%;
+        top: 56.5%;
+    }
+}
+
+@keyframes moveRT_second{
+    0%{
+        left: 34.2%;
+        top: 52%;
+    }
+    50%{
+        left: 46.5%;
+        top: 52%;
+    }
+    75%{
+        left: 46.5%;
+        top: 53.5%;
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        left: 48.5%;
+        top: 53.5%;
+        opacity: 0;
+    }
+}

@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     background-color: yellow;
-    z-index: 100;
+    z-index: 999;
 
     /*CHANGE BACK WHEN DONE*/
     /*display: none;*/
@@ -79,6 +79,12 @@
     display: none;
     margin: auto;
     background-color: aqua;
+}
+
+#sim_6{
+    display: none;
+    margin: auto;
+    background-color: orange;
 }
 
 /*Start of R Type Choices*/

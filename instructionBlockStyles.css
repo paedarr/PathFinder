@@ -45,6 +45,38 @@
     top: 59%;
 }
 
+#value_block_postRegister_1{
+    display: none;
+    position: absolute;
+    background-color: rgba(197, 144, 144, 0.8);
+    padding: 0.2vw;
+    border: 0.2vw solid black;
+    color: purple;
+    z-index: 100;
+    font-family: mainFont;
+    text-align: center;
+    font-size: 0.9vw;
+    /*------*/
+    left: 58%;
+    top: 53.5%;
+}
+
+#value_block_postRegister_2{
+    display: none;
+    position: absolute;
+    background-color: rgba(197, 144, 144, 0.8);
+    padding: 0.2vw;
+    border: 0.2vw solid black;
+    color: purple;
+    z-index: 100;
+    font-family: mainFont;
+    text-align: center;
+    font-size: 0.9vw;
+    /*------*/
+    left: 58%;
+    top: 57%;
+}
+
 /*-----------------------*/
 /*FOR TESTING POSITIONING*/
 
@@ -60,6 +92,6 @@
     text-align: center;
     font-size: 0.7vw;
     /*------*/
-    left: 48.5%;
-    top: 50.2%;
+    left: 46.5%;
+    top: 53.5%;
 }

@@ -95,6 +95,17 @@ function Rinstruction() {
             locRegister = document.getElementById("adduSourceRegisters").value;
             console.log("A :", inputA);
             console.log("B :", inputB);
+            if (isNaN(inputA)){
+                inputA = 6;
+            }
+            if (isNaN(inputB)){
+                inputB = 4;
+            }
+            var value_block_postRegister_1 = document.getElementById("value_block_postRegister_1");
+            var value_block_postRegister_2 = document.getElementById("value_block_postRegister_2");
+            value_block_postRegister_1.textContent = inputA;
+            value_block_postRegister_2.textContent = inputB;
+
             console.log("type of A :", typeA);
             console.log("type of B :", typeB);
             console.log("Source Reg: ", locRegister);
@@ -214,12 +225,44 @@ function Rinstruction() {
 
                 var sim_5 = document.getElementById("sim_5");
                 sim_5.addEventListener("click", function () {
+                    sim_5.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.textContent = "Then, the next 5 bits are read, which represent the reigster to read data from. In this case, the register is '" + typeABin + "', or " + typeA + ".";
                     setTimeout(function(){
                         var rs_block = document.getElementById("rs_block");
                         rs_block.style.animation = "moveRs_second 4s ease-in-out forwards";
-                    }, 2000);
+                        tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                        tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                        tipsBox.textContent = "The Register File then reads the data within " + typeA + " and sends this value forward to the ALU, which is " + inputA + ".";
+                        setTimeout(function(){
+                            value_block_postRegister_1.style.display = "block";
+                            value_block_postRegister_1.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                            value_block_postRegister_1.style.animation = "move_valueblock1_ini 4s ease-in-out forwards";
+                            setTimeout(function(){
+                                var sim_6 = document.getElementById("sim_6");
+                                sim_6.style.display = "block";
+                            }, 4500);
+                        }, 4000);
+                    }, 5000);
+                });
+
+                var sim_6 = document.getElementById("sim_6");
+                sim_6.addEventListener("click", function () {
+                    var tipsBox = document.getElementById("tipsBox");
+                    tipsBox.textContent = "Then, the next 5 bits are read, which represent the next reigster to read data from. In this case, the register is '" + typeBBin + "', or " + typeB + ".";
+                    setTimeout(function(){
+                        var rt_block = document.getElementById("rt_block");
+                        rt_block.style.animation = "moveRT_second 4s ease-in-out forwards";
+                        tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                        tipsBox.textContent = "The Register File then reads the data within " + typeB + " and sends this value forward to the ALU, which is " + inputB + ".";
+                        setTimeout(function(){
+                            tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                        }, 1000);
+                        setTimeout(function(){
+                            value_block_postRegister_2.style.display = "block";
+                            value_block_postRegister_2.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                        }, 4000);
+                    }, 5000);
                 });
             });
         });
