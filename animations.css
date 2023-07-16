@@ -254,3 +254,75 @@
         opacity: 0;
     }
 }
+
+@keyframes move_valueblock2_ini{
+    0%{
+        left: 58%;
+        top: 57%;
+    }
+    25%{
+        left: 61.6%;
+        top: 57%;
+    }
+    45%{
+        opacity: 1;
+    }
+    50%{
+        left: 61.6%;
+        top: 61%;
+        opacity: 0;
+    }
+
+    55%{
+        left: 64%;
+        top: 65.5%;
+        opacity: 0;
+    }
+    56%{
+        opacity: 1;
+    }
+    100%{   
+        left: 67.3%;
+        top: 65.5%;
+    }
+}
+
+@keyframes moveRD_second{
+    0%{
+        left: 34.2%;
+        top: 65%;
+    }
+    48%{
+        opacity: 1;
+    }
+    50%{
+        left: 38.5%;
+        top: 65%;
+        opacity: 0;
+    }
+    51%{
+        left: 42%;
+        top: 59.8%;
+    }
+    55%{
+        left: 42%;
+        top: 59.8%;
+        opacity: 1;
+    }
+    65%{
+        left: 44.3%;
+        top: 59.8%;
+    }
+    75%{
+        left: 44.3%;
+        top: 57%;
+    }
+    97%{
+        opacity: 1;
+    }
+    100%{
+        left: 48.7%;
+        top: 57%;
+        opacity: 0;
+    }
+}

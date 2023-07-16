@@ -87,6 +87,12 @@
     background-color: orange;
 }
 
+#sim_7{
+    display: none;
+    margin: auto;
+    background-color: blue;
+}
+
 /*Start of R Type Choices*/
 
 #rtypeChoiceTitle{

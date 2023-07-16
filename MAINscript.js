@@ -231,38 +231,59 @@ function Rinstruction() {
                     setTimeout(function(){
                         var rs_block = document.getElementById("rs_block");
                         rs_block.style.animation = "moveRs_second 4s ease-in-out forwards";
-                        tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
-                        tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
-                        tipsBox.textContent = "The Register File then reads the data within " + typeA + " and sends this value forward to the ALU, which is " + inputA + ".";
+                        setTimeout(function(){tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";}, 2500);
                         setTimeout(function(){
                             value_block_postRegister_1.style.display = "block";
                             value_block_postRegister_1.style.animation = "item_show_opacity 1s ease-in-out forwards";
-                            value_block_postRegister_1.style.animation = "move_valueblock1_ini 4s ease-in-out forwards";
+                            tipsBox.textContent = "The Register File then reads the data within " + typeA + " and sends this value forward to the ALU, which is " + inputA + ".";
+                            tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                            value_block_postRegister_1.style.animation = "move_valueblock1_ini 4s ease-in-out forwards";  
                             setTimeout(function(){
                                 var sim_6 = document.getElementById("sim_6");
                                 sim_6.style.display = "block";
                             }, 4500);
                         }, 4000);
-                    }, 5000);
+                    }, 2000);
                 });
 
                 var sim_6 = document.getElementById("sim_6");
                 sim_6.addEventListener("click", function () {
+                    sim_6.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.textContent = "Then, the next 5 bits are read, which represent the next reigster to read data from. In this case, the register is '" + typeBBin + "', or " + typeB + ".";
                     setTimeout(function(){
                         var rt_block = document.getElementById("rt_block");
                         rt_block.style.animation = "moveRT_second 4s ease-in-out forwards";
-                        tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
-                        tipsBox.textContent = "The Register File then reads the data within " + typeB + " and sends this value forward to the ALU, which is " + inputB + ".";
-                        setTimeout(function(){
-                            tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
-                        }, 1000);
+                        setTimeout(function(){tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";}, 2500);
                         setTimeout(function(){
                             value_block_postRegister_2.style.display = "block";
                             value_block_postRegister_2.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                            value_block_postRegister_2.style.animation = "move_valueblock2_ini 4s ease-in-out forwards";
+                            tipsBox.textContent = "The Register File then reads the data within " + typeB + " and sends this value forward to the ALU, which is " + inputB + ".";
+                            tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                            setTimeout(function(){
+                                var sim_7 = document.getElementById("sim_7");
+                                sim_7.style.display = "block";
+                            }, 4500);
                         }, 4000);
-                    }, 5000);
+                    }, 2000);
+                });
+
+                var sim_7 = document.getElementById("sim_7");
+                sim_7.addEventListener("click", function () {
+                    sim_7.style.display = "none";
+                    var tipsBox = document.getElementById("tipsBox");
+                    tipsBox.textContent = "Then, the next 5 bits are read, which represent the destination reigster to write data to. In this case, the register is '" + typeDestBin + "', or " + locRegister + ".";
+                    setTimeout(function(){
+                        var rd_block = document.getElementById("rd_block");
+                        rd_block.style.animation = "moveRD_second 6s ease-in-out forwards";
+                        tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
+                        setTimeout(function(){
+                            tipsBox.textContent = "Since the Control had activated the 'RegDest' path, the MUX that the destination register goes through has been activated.";
+                            tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                        }, 1000);
+
+                    }, 4000);
                 });
             });
         });
