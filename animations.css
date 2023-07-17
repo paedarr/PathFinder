@@ -326,3 +326,96 @@
         opacity: 0;
     }
 }
+
+@keyframes moveShamt_second{
+    0%{
+        left: 32.75%;
+        top: 75%;
+    }
+    15%{
+        left: 32.75%;
+        top: 80%;
+    }
+    30%{
+        left: 42%;
+        top: 80%;   
+        /*this is last position before disappearing*/
+    }
+    48%{
+        opacity: 1;
+        transform: none;
+        width: auto;
+    }
+    50%{
+        width: 0%;
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        left: 47%;
+        top: 80%;
+    }
+}
+
+@keyframes moveFunc_second{
+    0%{
+        left: 35.5%;
+        top: 75%;
+    }
+    15%{
+        left: 35.5%;
+        top: 80%;
+    }
+    30%{
+        left: 44.7%;
+        top: 80%;
+    }
+    40%{
+        left: 43.3%;
+        top: 82%;
+    }
+    50%{
+        left: 43.3%;
+        top: 90.5%;
+    }
+    75%{
+        left: 53.2%;
+        top: 90.5%;
+    }
+    85%{
+        left: 53.2%;
+        top: 86.5%;
+    }
+    97%{
+        opacity: 1;
+    }
+    100%{
+        left: 54.8%;
+        top: 86.5%;
+        opacity: 0;
+    }
+}
+
+@keyframes moveTypeOfOperation_ini{
+    0%{
+        left: 59.3%;
+        top: 85.7%; 
+        opacity: 0;
+    }
+    3%{
+        opacity: 1;
+    }
+    50%{
+        left: 69%;
+        top: 85.7%;  
+    }
+    97%{
+        opacity: 1;
+    }
+    100%{
+        left: 69%;
+        top: 67.5%;
+        opacity: 0;
+    }
+}

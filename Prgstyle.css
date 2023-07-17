@@ -93,6 +93,12 @@
     background-color: blue;
 }
 
+#sim_8{
+    display: none;
+    margin: auto;
+    background-color: purple;
+}
+
 /*Start of R Type Choices*/
 
 #rtypeChoiceTitle{

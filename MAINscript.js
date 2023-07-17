@@ -281,9 +281,33 @@ function Rinstruction() {
                         setTimeout(function(){
                             tipsBox.textContent = "Since the Control had activated the 'RegDest' path, the MUX that the destination register goes through has been activated.";
                             tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                            setTimeout(function(){
+                                var sim_8 = document.getElementById("sim_8");
+                                sim_8.style.display = "block";
+                            }, 2000);
                         }, 1000);
-
                     }, 4000);
+                });
+
+                var sim_8 = document.getElementById("sim_8");
+                sim_8.addEventListener("click", function () {
+                    sim_8.style.display = "none";
+                    var tipsBox = document.getElementById("tipsBox");
+                    tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
+                    tipsBox.textContent = "Then, bits 15-0 are sent forwards. However, 'shamt' is not used in this instruction, as it is typically used for shift instructions. So, only bits 5-0 are used, also known as the 'func'."
+                    setTimeout(function(){tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";}, 1000);
+                    var shamt_block = document.getElementById("shamt_block");
+                    var func_block = document.getElementById("func_block");
+                    setTimeout(function(){
+                        shamt_block.style.animation = "moveShamt_second 8s ease-in-out forwards";
+                        func_block.style.animation = "moveFunc_second 8s ease-in-out forwards";
+                        var typeofoperation_ALUcontrol_block = document.getElementById("typeofoperation_ALUcontrol_block");
+                        setTimeout(function(){
+                            typeofoperation_ALUcontrol_block.style.display = "block";
+                            typeofoperation_ALUcontrol_block.textContent = "+";
+                            typeofoperation_ALUcontrol_block.style.animation = "moveTypeOfOperation_ini 4s ease-in-out forwards";
+                        }, 8000);
+                    },3000);
                 });
             });
         });

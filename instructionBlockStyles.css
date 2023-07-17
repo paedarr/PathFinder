@@ -77,10 +77,42 @@
     top: 57%;
 }
 
+#typeofoperation_ALUcontrol_block{
+    display: none;
+    position: absolute;
+    background-color: rgba(113, 64, 106, 0.7);
+    padding: 0.2vw;
+    border: 0.2vw solid black;
+    color: white;
+    z-index: 100;
+    font-family: mainFont;
+    text-align: center;
+    font-size: 0.9vw;
+    /*------*/
+    left: 59.3%;
+    top: 85.7%;
+}
+
 /*-----------------------*/
 /*FOR TESTING POSITIONING*/
 
 #test_block_special{
+    display: none;
+    position: absolute;
+    background-color: rgba(113, 64, 106, 0.7);
+    padding: 0.2vw;
+    border: 0.2vw solid black;
+    color: white;
+    z-index: 100;
+    font-family: mainFont;
+    text-align: center;
+    font-size: 0.9vw;
+    /*------*/
+    left: 69%;
+    top: 67.5%;
+}
+
+#test_block_special2{
     display: none;
     position: absolute;
     background-color: rgba(128, 128, 128, 0.7);
@@ -92,6 +124,6 @@
     text-align: center;
     font-size: 0.7vw;
     /*------*/
-    left: 48.7%;
-    top: 57%;
+    left: 44.7%;
+    top: 80%;
 }
