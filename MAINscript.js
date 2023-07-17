@@ -306,6 +306,10 @@ function Rinstruction() {
                             typeofoperation_ALUcontrol_block.style.display = "block";
                             typeofoperation_ALUcontrol_block.textContent = "+";
                             typeofoperation_ALUcontrol_block.style.animation = "moveTypeOfOperation_ini 4s ease-in-out forwards";
+                            tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
+                            tipsBox.textContent = "Now that the ALU knows what kind of operation to perform, it can execute the instruction on the provided values."
+                            setTimeout(function(){tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";}, 1000);
+
                         }, 8000);
                     },3000);
                 });
