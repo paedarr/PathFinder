@@ -309,6 +309,10 @@ function Rinstruction() {
                             tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                             tipsBox.textContent = "Now that the ALU knows what kind of operation to perform, it can execute the instruction on the provided values."
                             setTimeout(function(){tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";}, 1000);
+                            setTimeout(function(){
+                                value_block_postRegister_1.style.animation = "combine_num_1 1s ease-in-out forwards";
+                                value_block_postRegister_2.style.animation = "combine_num_2 1s ease-in-out forwards";
+                            }, 4000);
 
                         }, 8000);
                     },3000);

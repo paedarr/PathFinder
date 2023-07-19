@@ -419,3 +419,40 @@
         opacity: 0;
     }
 }
+
+
+
+/*Stage 3 animations*/
+
+
+@keyframes combine_num_1{
+    0%{
+        left: 67.3%;
+        top: 56.5%;
+    }
+    50%{
+        left: 67.3%;
+        top: 60%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes combine_num_2{
+    0%{
+        left: 67.3%;
+        top: 65.5%;
+    }
+    50%{
+        left: 67.3%;
+        top: 63%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        left: 67.3%;
+        top: 61.5%;
+    }
+}

@@ -93,37 +93,53 @@
     top: 85.7%;
 }
 
-/*-----------------------*/
-/*FOR TESTING POSITIONING*/
-
-#test_block_special{
+#value_block_totalval{
     display: none;
     position: absolute;
-    background-color: rgba(113, 64, 106, 0.7);
+    background-color: rgba(197, 144, 144, 0.8);
     padding: 0.2vw;
     border: 0.2vw solid black;
-    color: white;
+    color: purple;
     z-index: 100;
     font-family: mainFont;
     text-align: center;
     font-size: 0.9vw;
     /*------*/
-    left: 69%;
-    top: 67.5%;
+    left: none;
+    top: none;
 }
 
-#test_block_special2{
-    display: none;
+/*-----------------------*/
+/*FOR TESTING POSITIONING*/
+
+#test_block_special{
+    display: block;
     position: absolute;
-    background-color: rgba(128, 128, 128, 0.7);
+    background-color: rgba(197, 144, 144, 0.8);
     padding: 0.2vw;
     border: 0.2vw solid black;
-    color: white;
+    color: purple;
     z-index: 100;
     font-family: mainFont;
     text-align: center;
-    font-size: 0.7vw;
+    font-size: 0.9vw;
     /*------*/
-    left: 44.7%;
-    top: 80%;
+    left: 67.3%;
+    top: 61.5%;
+}
+
+#test_block_special2{
+    display: block;
+    position: absolute;
+    background-color: rgba(197, 144, 144, 0.8);
+    padding: 0.2vw;
+    border: 0.2vw solid black;
+    color: purple;
+    z-index: 100;
+    font-family: mainFont;
+    text-align: center;
+    font-size: 0.9vw;
+    /*------*/
+    left: 67.3%;
+    top: 61.5%;
 }
