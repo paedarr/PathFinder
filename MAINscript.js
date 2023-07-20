@@ -312,6 +312,10 @@ function Rinstruction() {
                             setTimeout(function(){
                                 value_block_postRegister_1.style.animation = "combine_num_1 1s ease-in-out forwards";
                                 value_block_postRegister_2.style.animation = "combine_num_2 1s ease-in-out forwards";
+                                var value_block_totalval = document.getElementById("value_block_totalval");
+                                value_block_totalval.style.display = "block";
+                                value_block_totalval.textContent = value_block_postRegister_1.value + value_block_postRegister_2.value;
+                                value_block_totalval.style.animation = "moveTotal_num_forADDU 8s ease-in-out forwards";
                             }, 4000);
 
                         }, 8000);

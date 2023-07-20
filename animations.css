@@ -452,7 +452,84 @@
     }
     100%{
         opacity: 0;
+    }
+}
+
+@keyframes moveTotal_num_forADDU{
+    0%{
         left: 67.3%;
         top: 61.5%;
     }
+    5%{
+        left: 70%;
+        top: 61.5%;
+    }
+    7%{
+        left: 70%;
+        top: 63.2%;
+    }
+    10%{
+        left: 74.5%;
+        top: 63.2%;
+    }
+    13%{
+        left: 74.5%;
+        top: 71.8%;
+    }
+    15%{
+        left: 72.9%;
+        top: 71.8%;
+    }
+    25%{
+        left: 72.9%;
+        top: 92.5%;
+    }
+    50%{
+        left: 88.6%;
+        top: 92.5%;
+    }
+    54%{
+        opacity: 1;
+    }
+    55%{
+        left: 88.6%;
+        top: 84.5%;
+        opacity: 0;
+    }
+    56%{
+        left: 90.5%;
+        top: 76.7%;
+        opacity: 0;
+    }
+    57%{
+        opacity: 1;
+    }
+    60%{
+        left: 92%;
+        top: 76.7%;
+    }
+    66%{
+        left: 92%;
+        top: 94.3%;
+    }
+    75%{
+        left: 46.2%;
+        top: 94.3%;
+    }
+    85%{
+        left: 46.2%;
+        top: 59.3%;
+    }
+    89%{
+        opacity: 1;
+    }
+    90%{
+        left: 49.3%;
+        top: 59.3%;
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+
 }

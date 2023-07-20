@@ -104,16 +104,17 @@
     font-family: mainFont;
     text-align: center;
     font-size: 0.9vw;
+    opacity: 0;
     /*------*/
-    left: none;
-    top: none;
+    left: 67.3%;
+    top: 61.5%;
 }
 
 /*-----------------------*/
 /*FOR TESTING POSITIONING*/
 
 #test_block_special{
-    display: block;
+    display: none;
     position: absolute;
     background-color: rgba(197, 144, 144, 0.8);
     padding: 0.2vw;
@@ -124,12 +125,12 @@
     text-align: center;
     font-size: 0.9vw;
     /*------*/
-    left: 67.3%;
-    top: 61.5%;
+    left: 49.3%;
+    top: 59.3%;
 }
 
 #test_block_special2{
-    display: block;
+    display: none;
     position: absolute;
     background-color: rgba(197, 144, 144, 0.8);
     padding: 0.2vw;
