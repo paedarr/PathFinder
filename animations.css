@@ -542,3 +542,16 @@
     }
 
 }
+
+/*FINAL ANIMATIONS FOR R TYPE ADDU*/
+
+@keyframes move_currentC_icon_first{
+    0%{
+        left: 21%;
+        top: 14.5%
+    }
+    100%{
+        left: 21%;
+        top: 19.5%;
+    }
+}

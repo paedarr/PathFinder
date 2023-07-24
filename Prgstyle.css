@@ -99,6 +99,12 @@
     background-color: purple;
 }
 
+#sim_9{
+    display: none;
+    margin: auto;
+    background-color: yellow;
+}
+
 /*Start of R Type Choices*/
 
 #rtypeChoiceTitle{

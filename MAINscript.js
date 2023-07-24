@@ -124,6 +124,8 @@ function Rinstruction() {
 
             var currentAIcon = document.getElementById("currentAIcon");
             var currentBIcon = document.getElementById("currentBIcon");
+            //'currentCIcon' takes the place of currentBIcon, when it goes to the ADD node to index to the next address in memory
+            var currentCIcon = document.getElementById("currentCIcon");
 
             infoBubble1.textContent = "0x10000000";
 
@@ -324,11 +326,35 @@ function Rinstruction() {
                                         rd_block.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                         tipsBox.textContent = "The total is now sent to the destination address, " + locRegister + ", which is represented as '" + typeDestBin + "'. The value is stored here and now the main operation is complete. However, the program isn't done and still needs to get ready for the next operation.";
                                         tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                        setTimeout(function(){
+                                            rd_block.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                                            value_block_totalval.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                                            setTimeout(function(){
+                                                var sim_9 = document.getElementById("sim_9");
+                                                sim_9.style.display = "block";
+                                            }, 1000);
+                                        }, 15000);
                                     }, 500);
                                 }, 500);
                             }, 4000);
                         }, 8000);
                     },3000);
+                });
+
+                var sim_9 = document.getElementById("sim_9");
+                sim_9.addEventListener("click", function () {
+                    
+                    currentCIcon.style.display = "block";
+                    currentCIcon.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                    setTimeout(function(){
+                        currentCIcon.style.animation = "move_currentC_icon_first 1.5s ease-in-out forwards";
+                        setTimeout(function(){
+                            var infoBubble2 = document.getElementById("infoBubble2");
+                            infoBubble2.textContent = "0x10000000";
+                            infoBubble2.style.display = "block";
+                            infoBubble2.style.animation = "item_show_opacity 1s ease-in-out forwards";    
+                        }, 1500);
+                    }, 1000);
                 });
             });
         });

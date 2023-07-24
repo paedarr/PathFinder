@@ -23,6 +23,16 @@
     top: 56%;
 }
 
+#currentCIcon{
+    display: none;
+    position: absolute;
+    width: 2.5%;
+    padding: 2px;
+    z-index: 98;
+    left: 21%;
+    top: 14.5%;
+}
+
 #infoBubble1 {
     background-color: #08B4FF;
     border: 3px solid black;
@@ -40,6 +50,22 @@
     -webkit-animation: showThoughtBubble 0.2s ease-in-out forwards;
     -moz-animation: showThoughtBubble 0.2s ease-in-out forwards;
     -o-animation: showThoughtBubble 0.2s ease-in-out forwards;
+}
+
+#infoBubble2{
+    background-color: #08B4FF;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 0.5%;
+    position: absolute;
+    color: white;
+    display: none;
+    font-size: 1vw;
+    font-family: mainFont;
+    left: 16.7%;
+    top: 17.5%;
+    opacity: 0;
+    z-index: 99;
 }
 
 #currentAIcon:hover ~ #infoBubble1{
