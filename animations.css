@@ -555,3 +555,121 @@
         top: 19.5%;
     }
 }
+
+@keyframes shrink_infoBubble2{
+    from{
+        opacity: 1;
+    }
+    to{
+        left: 21.5%;
+        top: 20%;
+        font-size: 0.2vw;
+        opacity: 0;
+    }
+}
+
+@keyframes move_incrementIcon{
+    0%{
+        left: 18%;
+        top: 24.9%;
+        opacity: 1;
+    }
+    50%{
+        left: 21.5%;
+        top: 24.9%;
+        opacity: 1;
+    }
+    97%{
+        opacity: 1;
+    }
+    100%{
+        left: 21.5%;
+        top: 20.5%;
+        opacity: 0;
+    }
+}
+
+@keyframes incremented_box_colorShift{
+    0%{
+        background-color: #08B4FF;
+    }
+    50%{
+        background-color: red;
+    }
+    100%{
+        background-color: #08B4FF;
+    }
+}
+
+@keyframes final_currentC_move{
+    0%{
+        left: 21%;
+        top: 19.5%;
+        opacity: 1;
+    }
+    20%{
+        left: 50.7%;
+        top: 19.5%;
+    }
+    25%{
+        left: 50.7%;
+        top: 9.5%;
+    }
+    34%{
+        opacity: 1;
+    }
+    35%{
+        left: 74%;
+        top: 9.5%;
+        opacity: 0;
+    }
+    36%{
+        left: 77%;
+        top: 20.3%;
+        opacity: 0;
+    }
+    37%{
+        opacity: 1;
+    }
+    44%{
+        opacity: 1;
+    }
+    45%{
+        left: 83%;
+        top: 20.3%;
+        opacity: 0;
+    }
+    47%{
+        left: 86.5%;
+        top: 14.8%;
+        opacity: 0;
+    }
+    48%{
+        opacity: 1;
+    }
+    52%{
+        left: 90.8%;
+        top: 14.8%;
+        opacity: 1;
+    }
+    63%{
+        left: 90.8%;
+        top: 1.8%;
+        opacity: 1;
+    }
+    80%{
+        left: 2.1%;
+        top: 1.8%;
+        opacity: 1;
+    }
+    92%{
+        left: 2.1%;
+        top: 56%;
+        opacity: 1;
+    }
+    100%{
+        left: 7.9%;
+        top: 56%;
+        opacity: 1;
+    }
+}

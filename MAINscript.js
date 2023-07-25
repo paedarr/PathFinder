@@ -327,6 +327,8 @@ function Rinstruction() {
                                         tipsBox.textContent = "The total is now sent to the destination address, " + locRegister + ", which is represented as '" + typeDestBin + "'. The value is stored here and now the main operation is complete. However, the program isn't done and still needs to get ready for the next operation.";
                                         tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                         setTimeout(function(){
+                                            value_block_totalval.style.left = "49.3%";
+                                            value_block_totalval.style.top = "59.3%";
                                             rd_block.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                                             value_block_totalval.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                                             setTimeout(function(){
@@ -343,7 +345,7 @@ function Rinstruction() {
 
                 var sim_9 = document.getElementById("sim_9");
                 sim_9.addEventListener("click", function () {
-                    
+                    sim_9.style.display = "none";
                     currentCIcon.style.display = "block";
                     currentCIcon.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -352,7 +354,31 @@ function Rinstruction() {
                             var infoBubble2 = document.getElementById("infoBubble2");
                             infoBubble2.textContent = "0x10000000";
                             infoBubble2.style.display = "block";
-                            infoBubble2.style.animation = "item_show_opacity 1s ease-in-out forwards";    
+                            infoBubble2.style.animation = "item_show_opacity 1s ease-in-out forwards";   
+                            var tipsBox = document.getElementById("tipsBox");
+                            tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards"; 
+                            tipsBox.textContent = "The memory address from the start now needs to be incremented, by 4, so the program can execute the next step using the next address."
+                            setTimeout(function(){tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards"; }, 1000);
+                            setTimeout(function(){
+                                var incrementIcon = document.getElementById("incrementIcon");
+                                incrementIcon.style.display = "block";
+                                incrementIcon.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                                setTimeout(function(){
+                                    incrementIcon.style.animation = "move_incrementIcon 2.5s ease-in-out forwards";
+                                    setTimeout(function(){
+                                        infoBubble2.style.animation = "incremented_box_colorShift 2s ease-in-out";
+                                        setTimeout(function(){infoBubble2.textContent="0x10000004";}, 500);
+                                        setTimeout(function(){
+                                            infoBubble2.style.animation = "shrink_infoBubble2 1.5s ease-in-out forwards";
+                                            currentCIcon.style.left = "21%";
+                                            currentCIcon.style.top = "19.5%";
+                                            setTimeout(function(){
+                                                currentCIcon.style.animation = "final_currentC_move 10s ease-in-out forwards";
+                                            }, 2000);
+                                        }, 2500);
+                                    }, 3000);
+                                }, 1500);
+                            }, 1000);
                         }, 1500);
                     }, 1000);
                 });

@@ -33,6 +33,17 @@
     top: 14.5%;
 }
 
+#incrementIcon{
+    display: none;
+    position: absolute;
+    width: 1.5%;
+    padding: 2px;
+    z-index: 98;
+    left: 18%;
+    top: 24.9%;
+    opacity: 0;
+}
+
 #infoBubble1 {
     background-color: #08B4FF;
     border: 3px solid black;
@@ -64,7 +75,7 @@
     font-family: mainFont;
     left: 16.7%;
     top: 17.5%;
-    opacity: 0;
+    opacity: 1;
     z-index: 99;
 }
 
