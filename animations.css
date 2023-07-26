@@ -1,3 +1,25 @@
+@keyframes shift_set_color_andOpacity{
+    from{
+        color: gray;
+        opacity: 0.2;
+    }
+    to{
+        color: red;
+        opacity: 1;
+    }
+}
+
+@keyframes shift_control_color_andOpacity{
+    from{
+        color: gray;
+        opacity: 0.2;
+    }
+    to{
+        color: blue;
+        opacity: 1;
+    }
+}
+
 @keyframes item_disappear_opacity{
     from{
         opacity: 1;

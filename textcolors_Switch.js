@@ -1,9 +1,7 @@
 function activateText(text){
-    text.style.color = "red";
-    text.style.opacity = "1";
+    text.style.animation = "shift_set_color_andOpacity 1.5s ease-in-out forwards";
 }
 
 function activateControl_text(text){
-    text.style.color = "blue";
-    text.style.opacity = "1";
+    text.style.animation = "shift_control_color_andOpacity 1.5s ease-in-out forwards";
 }

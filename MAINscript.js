@@ -139,36 +139,36 @@ function Rinstruction() {
                     setTimeout(function () {
                         currentBIcon.style.display = "block";
                         currentBIcon.style.animation = "currentB_first 5s ease-in-out forwards";
+                        var nextBtn1 = document.getElementById("nextSim");
+                        setTimeout(function () {
+                            var IMinfo = document.getElementById("IMbox");
+                            IMinfo.style.animation = "IManimShow 0.5s ease-in-out forwards";
+                            var IMboxTEXT = document.getElementById("IMboxTEXT");
+                            var spanEleNew = document.createElement("span");
+                            spanEleNew.style.fontSize = "0.6vw";
+                            spanEleNew.style.color = "orangered";
+                            spanEleNew.textContent = completeExpression;
+                            IMboxTEXT.appendChild(document.createTextNode("The IM then takes the memory address, and retrieves the instruction stored within. In this case, that instruction is: "))
+                            IMboxTEXT.appendChild(spanEleNew);
+                            IMboxTEXT.style.animation = "IManimShowText 0.5s ease-in-out forwards";
+                            setTimeout(function(){nextBtn1.style.display = "block";}, 1000);
+                        }, 5000);
                     }, 2700);
                 }, 1000);
 
                 //this number represents 2.7 seconds of the animation, where the second current shows up
 
+
                 var nextBtn1 = document.getElementById("nextSim");
-                setTimeout(function () {
-                    nextBtn1.style.display = "block";
-                    var IMinfo = document.getElementById("IMbox");
-                    IMinfo.style.animation = "IManimShow 0.5s ease-in-out forwards";
-                    var IMboxTEXT = document.getElementById("IMboxTEXT");
-                    var spanEleNew = document.createElement("span");
-                    spanEleNew.style.fontSize = "0.6vw";
-                    spanEleNew.style.color = "orangered";
-                    spanEleNew.textContent = completeExpression;
-                    IMboxTEXT.appendChild(document.createTextNode("The IM then takes the memory address, and retrieves the instruction stored within. In this case, that instruction is: "))
-                    IMboxTEXT.appendChild(spanEleNew);
-                    IMboxTEXT.style.animation = "IManimShowText 0.5s ease-in-out forwards";
-                }, 9000);
-
-
                 nextBtn1.addEventListener("click", function () {
                     var tipsBox = document.getElementById("tipsBox");
                     var IMboxTEXT = document.getElementById("IMboxTEXT");
                     IMboxTEXT.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
-                    tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control, which will tell the rest of the program what kind of instruction is to be evaluated.";
-                    tipsBox.style.animation = "showTipsBox 1s ease-in-out forwards";
                     nextBtn1.style.display = "none";
                     rtypeaddu("000000", typeABin, typeBBin, typeDestBin, "00000", "100001");
                     showInstructionBlocks();
+                    tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control, which will tell the rest of the program what kind of instruction is to be evaluated.";
+                    tipsBox.style.animation = "showTipsBox 0.5s ease-in-out forwards";
                     setTimeout(function () {
                         var IMinfo = document.getElementById("IMbox");
                         IMinfo.style.animation = "hide_opacity_fromhalf 0.5s ease-in-out forwards";
@@ -185,43 +185,47 @@ function Rinstruction() {
                             var sim_3 = document.getElementById("sim_3");
                             sim_3.style.display = "block";
                         }, 3000);
-                    }, 3000);
+                    }, 2000);
                 });
                 var sim_3 = document.getElementById("sim_3");
                 sim_3.addEventListener("click", function () {
                     sim_3.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
-                    tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
-                    tipsBox.textContent = "The first six bits are sent to the Control unit, which then tells it which paths and operations to execute in the program. Remember, that all of these steps are happening concurrently in reality, and this is just a step-by-step visualization.";
-                    var opBlock = document.getElementById("opcode_block");
-                    opBlock.style.animation = "moveOpcode_second 3s ease-in-out forwards";
                     setTimeout(function () {
-                        var ctrlTextBox = document.getElementById("CTRLboxTEXT");
-                        ctrlTextBox.textContent = "The Control then tells the program what 'paths' need to be 'activated'."
-                        ctrlTextBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
-                    }, 3000);
-                    setTimeout(function(){
-                        var sim_4 = document.getElementById("sim_4");
-                        sim_4.style.display = "block";
-                    }, 4000);
+                        tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                        tipsBox.textContent = "The first six bits are sent to the Control unit, which then tells it which paths and operations to execute in the program. Remember, that all of these steps are happening concurrently in reality, and this is just a step-by-step visualization.";
+                        var opBlock = document.getElementById("opcode_block");
+                        opBlock.style.animation = "moveOpcode_second 3s ease-in-out forwards";
+                        setTimeout(function(){
+                            var ctrlTextBox = document.getElementById("CTRLboxTEXT");
+                            ctrlTextBox.textContent = "The Control then tells the program what 'paths' need to be 'activated'."
+                            ctrlTextBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                            setTimeout(function(){
+                                var sim_4 = document.getElementById("sim_4");
+                                sim_4.style.display = "block";
+                            }, 1500);
+                        }, 3000);
+                    }, 1000);
                 });
 
                 var sim_4 = document.getElementById("sim_4");
                 sim_4.addEventListener("click", function () {
                     sim_4.style.display = "none";
-                    var ctrlTextBox = document.getElementById("CTRLboxTEXT");
-                    ctrlTextBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
-                    var regdest_textCT = activateControl_text(document.getElementById("regdest_textCT"));
-                    var aluop_textCT = activateControl_text(document.getElementById("aluop_textCT"));
-                    var regwrite_textCT = activateControl_text(document.getElementById("regwrite_textCT"));
                     var tipsBox = document.getElementById("tipsBox");
-                    tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
-                    tipsBox.style.animation = "item_show_opacity 1s ease-in-out forwards";
-                    tipsBox.textContent = "The Control has now told the program which 'paths' to use during execution, per the opcode.";
+                    tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
-                        var sim_5 = document.getElementById("sim_5");
-                        sim_5.style.display = "block";
+                        var ctrlTextBox = document.getElementById("CTRLboxTEXT");
+                        ctrlTextBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                        var regdest_textCT = activateControl_text(document.getElementById("regdest_textCT"));
+                        var aluop_textCT = activateControl_text(document.getElementById("aluop_textCT"));
+                        var regwrite_textCT = activateControl_text(document.getElementById("regwrite_textCT"));
+                        tipsBox.textContent = "The Control has now told the program which 'paths' to use during execution, per the opcode.";
+                        tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                        setTimeout(function(){
+                            var sim_5 = document.getElementById("sim_5");
+                            sim_5.style.display = "block";
+                        }, 2000);
                     }, 1000);
                 });
 
@@ -229,66 +233,79 @@ function Rinstruction() {
                 sim_5.addEventListener("click", function () {
                     sim_5.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
-                    tipsBox.textContent = "Then, the next 5 bits are read, which represent the reigster to read data from. In this case, the register is '" + typeABin + "', or " + typeA + ".";
+                    tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
+                        tipsBox.textContent = "Then, the next 5 bits are read, which represent the reigster to read data from. In this case, the register is '" + typeABin + "', or " + typeA + ".";
+                        tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                         var rs_block = document.getElementById("rs_block");
                         rs_block.style.animation = "moveRs_second 4s ease-in-out forwards";
-                        setTimeout(function(){tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";}, 2500);
                         setTimeout(function(){
-                            value_block_postRegister_1.style.display = "block";
-                            value_block_postRegister_1.style.animation = "item_show_opacity 1s ease-in-out forwards";
-                            tipsBox.textContent = "The Register File then reads the data within " + typeA + " and sends this value forward to the ALU, which is " + inputA + ".";
-                            tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
-                            value_block_postRegister_1.style.animation = "move_valueblock1_ini 4s ease-in-out forwards";  
+                            tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                             setTimeout(function(){
-                                var sim_6 = document.getElementById("sim_6");
-                                sim_6.style.display = "block";
-                            }, 4500);
+                                value_block_postRegister_1.style.display = "block";
+                                value_block_postRegister_1.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                                tipsBox.textContent = "The Register File then reads the data within " + typeA + " and sends this value forward to the ALU, which is " + inputA + ".";
+                                tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                value_block_postRegister_1.style.animation = "move_valueblock1_ini 4s ease-in-out forwards";  
+                                setTimeout(function(){
+                                    var sim_6 = document.getElementById("sim_6");
+                                    sim_6.style.display = "block";
+                                }, 4500);
+                            }, 500);
                         }, 4000);
-                    }, 2000);
+                    }, 500);
                 });
 
                 var sim_6 = document.getElementById("sim_6");
                 sim_6.addEventListener("click", function () {
                     sim_6.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
-                    tipsBox.textContent = "Then, the next 5 bits are read, which represent the next reigster to read data from. In this case, the register is '" + typeBBin + "', or " + typeB + ".";
+                    tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
+                        tipsBox.textContent = "Then, the next 5 bits are read, which represent the next reigster to read data from. In this case, the register is '" + typeBBin + "', or " + typeB + ".";
+                        tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                         var rt_block = document.getElementById("rt_block");
                         rt_block.style.animation = "moveRT_second 4s ease-in-out forwards";
-                        setTimeout(function(){tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";}, 2500);
                         setTimeout(function(){
-                            value_block_postRegister_2.style.display = "block";
-                            value_block_postRegister_2.style.animation = "item_show_opacity 1s ease-in-out forwards";
-                            value_block_postRegister_2.style.animation = "move_valueblock2_ini 4s ease-in-out forwards";
-                            tipsBox.textContent = "The Register File then reads the data within " + typeB + " and sends this value forward to the ALU, which is " + inputB + ".";
-                            tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                            tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                             setTimeout(function(){
-                                var sim_7 = document.getElementById("sim_7");
-                                sim_7.style.display = "block";
-                            }, 4500);
+                                tipsBox.textContent = "The Register File then reads the data within " + typeB + " and sends this value forward to the ALU, which is " + inputB + ".";
+                                tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                value_block_postRegister_2.style.display = "block";
+                                value_block_postRegister_2.style.animation = "item_show_opacity 1s ease-in-out forwards";
+                                value_block_postRegister_2.style.animation = "move_valueblock2_ini 4s ease-in-out forwards";
+                                tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                setTimeout(function(){
+                                    var sim_7 = document.getElementById("sim_7");
+                                    sim_7.style.display = "block";
+                                }, 4500);
+                            }, 500);
                         }, 4000);
-                    }, 2000);
+                    }, 500);
                 });
 
                 var sim_7 = document.getElementById("sim_7");
                 sim_7.addEventListener("click", function () {
                     sim_7.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
-                    tipsBox.textContent = "Then, the next 5 bits are read, which represent the destination reigster to write data to. In this case, the register is '" + typeDestBin + "', or " + locRegister + ".";
+                    tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
+                        tipsBox.textContent = "Then, the next 5 bits are read, which represent the destination reigster to write data to. In this case, the register is '" + typeDestBin + "', or " + locRegister + ".";
+                        tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                         var rd_block = document.getElementById("rd_block");
                         rd_block.style.animation = "moveRD_second 6s ease-in-out forwards";
-                        tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                         setTimeout(function(){
-                            tipsBox.textContent = "Since the Control had activated the 'RegDest' path, the MUX that the destination register goes through has been activated.";
-                            tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                            tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                             setTimeout(function(){
-                                var sim_8 = document.getElementById("sim_8");
-                                sim_8.style.display = "block";
-                            }, 2000);
-                        }, 1000);
-                    }, 4000);
+                                tipsBox.textContent = "Since the Control had activated the 'RegDest' path, the MUX that the destination register goes through has been activated.";
+                                tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                setTimeout(function(){
+                                    var sim_8 = document.getElementById("sim_8");
+                                    sim_8.style.display = "block";
+                                }, 500);
+                            }, 500);
+                        }, 6000);
+                    }, 500);
                 });
 
                 var sim_8 = document.getElementById("sim_8");
@@ -296,51 +313,58 @@ function Rinstruction() {
                     sim_8.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
-                    tipsBox.textContent = "Then, bits 15-0 are sent forwards. However, 'shamt' is not used in this instruction, as it is typically used for shift instructions. So, only bits 5-0 are used, also known as the 'func'."
-                    setTimeout(function(){tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";}, 1000);
-                    var shamt_block = document.getElementById("shamt_block");
-                    var func_block = document.getElementById("func_block");
                     setTimeout(function(){
-                        shamt_block.style.animation = "moveShamt_second 8s ease-in-out forwards";
-                        func_block.style.animation = "moveFunc_second 8s ease-in-out forwards";
-                        var typeofoperation_ALUcontrol_block = document.getElementById("typeofoperation_ALUcontrol_block");
+                        tipsBox.textContent = "Then, bits 15-0 are sent forwards. However, 'shamt' is not used in this instruction, as it is typically used for shift instructions. So, only bits 5-0 are used, also known as the 'func'."
+                        tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                        var shamt_block = document.getElementById("shamt_block");
+                        var func_block = document.getElementById("func_block");
                         setTimeout(function(){
-                            typeofoperation_ALUcontrol_block.style.display = "block";
-                            typeofoperation_ALUcontrol_block.textContent = "+";
-                            typeofoperation_ALUcontrol_block.style.animation = "moveTypeOfOperation_ini 4s ease-in-out forwards";
-                            tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
-                            tipsBox.textContent = "Now that the ALU knows what kind of operation to perform, it can execute the instruction on the provided values."
-                            setTimeout(function(){tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";}, 1000);
+                            shamt_block.style.animation = "moveShamt_second 8s ease-in-out forwards";
+                            func_block.style.animation = "moveFunc_second 8s ease-in-out forwards";
+                            var typeofoperation_ALUcontrol_block = document.getElementById("typeofoperation_ALUcontrol_block");
                             setTimeout(function(){
-                                value_block_postRegister_1.style.animation = "combine_num_1 1s ease-in-out forwards";
-                                value_block_postRegister_2.style.animation = "combine_num_2 1s ease-in-out forwards";
+                                typeofoperation_ALUcontrol_block.style.display = "block";
+                                typeofoperation_ALUcontrol_block.textContent = "+";
+                                typeofoperation_ALUcontrol_block.style.animation = "moveTypeOfOperation_ini 4s ease-in-out forwards";
+                                tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                                 setTimeout(function(){
-                                    var value_block_totalval = document.getElementById("value_block_totalval");
-                                    value_block_totalval.style.display = "block";
-                                    value_block_totalval.textContent = inputA + inputB;
-                                    value_block_totalval.style.animation = "moveTotal_num_forADDU 12s ease-in-out forwards";
+                                    tipsBox.textContent = "Now that the ALU knows what kind of operation to perform, it can execute the instruction on the provided values."
+                                    tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                     setTimeout(function(){
-                                        var rd_block = document.getElementById("rd_block");
-                                        rd_block.style.left = "48.7%";
-                                        rd_block.style.top = "57%";
-                                        rd_block.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
-                                        tipsBox.textContent = "The total is now sent to the destination address, " + locRegister + ", which is represented as '" + typeDestBin + "'. The value is stored here and now the main operation is complete. However, the program isn't done and still needs to get ready for the next operation.";
-                                        tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                        value_block_postRegister_1.style.animation = "combine_num_1 1s ease-in-out forwards";
+                                        value_block_postRegister_2.style.animation = "combine_num_2 1s ease-in-out forwards";
                                         setTimeout(function(){
-                                            value_block_totalval.style.left = "49.3%";
-                                            value_block_totalval.style.top = "59.3%";
-                                            rd_block.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
-                                            value_block_totalval.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                                            var value_block_totalval = document.getElementById("value_block_totalval");
+                                            value_block_totalval.style.display = "block";
+                                            value_block_totalval.textContent = inputA + inputB;
+                                            value_block_totalval.style.animation = "moveTotal_num_forADDU 12s ease-in-out forwards";
                                             setTimeout(function(){
-                                                var sim_9 = document.getElementById("sim_9");
-                                                sim_9.style.display = "block";
-                                            }, 1000);
-                                        }, 15000);
+                                                var rd_block = document.getElementById("rd_block");
+                                                rd_block.style.left = "48.7%";
+                                                rd_block.style.top = "57%";
+                                                rd_block.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                                setTimeout(function(){
+                                                    tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
+                                                    setTimeout(function(){
+                                                        tipsBox.textContent = "The total is now sent to the destination address, " + locRegister + ", which is represented as '" + typeDestBin + "'. The value is stored here and now the main operation is complete. However, the program isn't done and still needs to get ready for the next operation.";
+                                                        tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                                        value_block_totalval.style.left = "49.3%";
+                                                        value_block_totalval.style.top = "59.3%";
+                                                        rd_block.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                                                        value_block_totalval.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                                                        setTimeout(function(){
+                                                            var sim_9 = document.getElementById("sim_9");
+                                                            sim_9.style.display = "block";
+                                                        }, 1000);
+                                                    }, 500);
+                                                }, 500);
+                                            }, 12000);
+                                        }, 1000);
                                     }, 500);
-                                }, 500);
-                            }, 4000);
-                        }, 8000);
-                    },3000);
+                                }, 4000);
+                            }, 8000);
+                        },500);
+                    }, 500);
                 });
 
                 var sim_9 = document.getElementById("sim_9");
@@ -357,9 +381,9 @@ function Rinstruction() {
                             infoBubble2.style.animation = "item_show_opacity 1s ease-in-out forwards";   
                             var tipsBox = document.getElementById("tipsBox");
                             tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards"; 
-                            tipsBox.textContent = "The memory address from the start now needs to be incremented, by 4, so the program can execute the next step using the next address."
-                            setTimeout(function(){tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards"; }, 1000);
                             setTimeout(function(){
+                                tipsBox.textContent = "The memory address from the start now needs to be incremented, by 4, so the program can execute the next step using the next address."
+                                tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                 var incrementIcon = document.getElementById("incrementIcon");
                                 incrementIcon.style.display = "block";
                                 incrementIcon.style.animation = "item_show_opacity 1s ease-in-out forwards";
@@ -372,15 +396,18 @@ function Rinstruction() {
                                             infoBubble2.style.animation = "shrink_infoBubble2 1.5s ease-in-out forwards";
                                             currentCIcon.style.left = "21%";
                                             currentCIcon.style.top = "19.5%";
+                                            tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards"; 
                                             setTimeout(function(){
+                                                tipsBox.textContent = "The ADDER then sends the new, incremented address back to the PC for the next operation to be executed. This operation is now complete.";
+                                                tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                                 currentCIcon.style.animation = "final_currentC_move 10s ease-in-out forwards";
-                                            }, 2000);
-                                        }, 2500);
-                                    }, 3000);
-                                }, 1500);
+                                            }, 1500);
+                                        }, 2000);
+                                    }, 2500);
+                                }, 1000);
                             }, 1000);
                         }, 1500);
-                    }, 1000);
+                    }, 500);
                 });
             });
         });
