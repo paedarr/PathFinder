@@ -417,14 +417,40 @@ p#instr_25to0, p#pcplus4_31to28, p#jumpadd_31to0, p#regdest_textCT, p#jump_textC
     border-radius: 20px;
 }
 
-#tipsBox{
-    position: absolute;
+
+.tipsBoxCanvasContainer{
     display: block;
+    background-color: red;
+    position: absolute;
+    width: 27%;
+    height: 30%;
+    z-index: 99;
+    top: 69%;
+    left: 3.1%;
+    border-radius: 3px;
+}
+
+
+#tipsBox{
+    display: block;
+    margin: 1%;
     background-color: yellowgreen;
-    top: 75%;
-    left: 6.2%;
-    width: 25%;
-    font-size: 1vw;
+    height: 48%;
+    font-size: 0.9vw;
+    color: white;
+    font-family: mainFont;
+    padding: 0.5vw;
+    border-radius: 15px;
+    border: 3px solid black;
+    opacity: 0;
+}
+
+#previousTipsBox{
+    display: block;
+    margin: 1%;
+    background-color: gray;
+    height: 20%;
+    font-size: 0.6vw;
     color: white;
     font-family: mainFont;
     padding: 0.5vw;
