@@ -1602,6 +1602,37 @@ function Rinstruction() {
                 });
             });
         });
+    }
+
+    else if (chosenType == "div") {
 
     }
+    else if (chosenType == "divu") {
+
+    }
+    else if (chosenType == "mult") {
+
+    }
+    else if (chosenType == "multu") {
+
+    }
+    else if (chosenType == "sllv"){
+
+    }
+    else if (chosenType == "sll"){
+        
+    }
+    else if (chosenType == "sllv"){
+        
+    }
+    else if (chosenType == "srl"){
+        
+    }
+    else if (chosenType == "srlv"){
+        
+    }
+    else if (chosenType == "jr"){
+        
+    }
+
 }
