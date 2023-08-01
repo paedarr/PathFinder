@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="nodesStyling.css">
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="instructionBlockStyles.css">
-    <link rel="stylesheet" href="mainAnimations.css">
 </head>
 
 <body>
@@ -44,72 +43,80 @@
             <option value="divu">divu</option>
             <option value="mult">mult</option>
             <option value="multu">multu</option>
-            <option value = "sll">sll</option>
-            <option value = "sllv">sllv</option>
+            <option value="sll">sll</option>
+            <option value="sllv">sllv</option>
         </select>
         <button id="rtypeConfirm" onclick="Rinstruction()">Next</button>
 
 
         <label id="adduInputTitle">$rd, $rt, $rs</label>
 
-        <select name="adduSourceRegisters" id="adduSourceRegisters">
-            <option value="$t0">$t0</option>
-            <option value="$t1">$t1</option>
-            <option value="$t2">$t2</option>
-            <option value="$t3">$t3</option>
-            <option value="$t4">$t4</option>
-            <option value="$t5">$t5</option>
-            <option value="$t6">$t6</option>
-            <option value="$t7">$t7</option>
-            <option value="$s0">$s0</option>
-            <option value="$s1">$s1</option>
-            <option value="$s2">$s2</option>
-            <option value="$s3">$s3</option>
-            <option value="$s4">$s4</option>
-            <option value="$s5">$s5</option>
-            <option value="$s6">$s6</option>
-            <option value="$s7">$s7</option>
-        </select>
+        <div class="containRtypeRegistersALL">
+            <div class="containRTypeDestSelector">
+                <select name="adduSourceRegisters" id="adduSourceRegisters">
+                    <option value="$t0">$t0</option>
+                    <option value="$t1">$t1</option>
+                    <option value="$t2">$t2</option>
+                    <option value="$t3">$t3</option>
+                    <option value="$t4">$t4</option>
+                    <option value="$t5">$t5</option>
+                    <option value="$t6">$t6</option>
+                    <option value="$t7">$t7</option>
+                    <option value="$s0">$s0</option>
+                    <option value="$s1">$s1</option>
+                    <option value="$s2">$s2</option>
+                    <option value="$s3">$s3</option>
+                    <option value="$s4">$s4</option>
+                    <option value="$s5">$s5</option>
+                    <option value="$s6">$s6</option>
+                    <option value="$s7">$s7</option>
+                </select>
+            </div>
 
-        <select name="adduInputAregisters" id="adduInputAregisters">
-            <option value="$t0">$t0</option>
-            <option value="$t1">$t1</option>
-            <option value="$t2">$t2</option>
-            <option value="$t3">$t3</option>
-            <option value="$t4">$t4</option>
-            <option value="$t5">$t5</option>
-            <option value="$t6">$t6</option>
-            <option value="$t7">$t7</option>
-            <option value="$s0">$s0</option>
-            <option value="$s1">$s1</option>
-            <option value="$s2">$s2</option>
-            <option value="$s3">$s3</option>
-            <option value="$s4">$s4</option>
-            <option value="$s5">$s5</option>
-            <option value="$s6">$s6</option>
-            <option value="$s7">$s7</option>
-        </select>
-        <input type="number" id="adduInputA">
+            <div class="containRTypeFirstSelectors">
+                <select name="adduInputAregisters" id="adduInputAregisters">
+                    <option value="$t0">$t0</option>
+                    <option value="$t1">$t1</option>
+                    <option value="$t2">$t2</option>
+                    <option value="$t3">$t3</option>
+                    <option value="$t4">$t4</option>
+                    <option value="$t5">$t5</option>
+                    <option value="$t6">$t6</option>
+                    <option value="$t7">$t7</option>
+                    <option value="$s0">$s0</option>
+                    <option value="$s1">$s1</option>
+                    <option value="$s2">$s2</option>
+                    <option value="$s3">$s3</option>
+                    <option value="$s4">$s4</option>
+                    <option value="$s5">$s5</option>
+                    <option value="$s6">$s6</option>
+                    <option value="$s7">$s7</option>
+                </select>
+                <input type="number" id="adduInputA">
+            </div>
 
-        <select name="adduInputBregisters" id="adduInputBregisters">
-            <option value="$t0">$t0</option>
-            <option value="$t1">$t1</option>
-            <option value="$t2">$t2</option>
-            <option value="$t3">$t3</option>
-            <option value="$t4">$t4</option>
-            <option value="$t5">$t5</option>
-            <option value="$t6">$t6</option>
-            <option value="$t7">$t7</option>
-            <option value="$s0">$s0</option>
-            <option value="$s1">$s1</option>
-            <option value="$s2">$s2</option>
-            <option value="$s3">$s3</option>
-            <option value="$s4">$s4</option>
-            <option value="$s5">$s5</option>
-            <option value="$s6">$s6</option>
-            <option value="$s7">$s7</option>
-        </select>
-        <input type="number" id="adduInputB">
+            <div class="containRTypeSecondSelectors">
+                <select name="adduInputBregisters" id="adduInputBregisters">
+                    <option value="$t0">$t0</option>
+                    <option value="$t1">$t1</option>
+                    <option value="$t2">$t2</option>
+                    <option value="$t3">$t3</option>
+                    <option value="$t4">$t4</option>
+                    <option value="$t5">$t5</option>
+                    <option value="$t6">$t6</option>
+                    <option value="$t7">$t7</option>
+                    <option value="$s0">$s0</option>
+                    <option value="$s1">$s1</option>
+                    <option value="$s2">$s2</option>
+                    <option value="$s3">$s3</option>
+                    <option value="$s4">$s4</option>
+                    <option value="$s5">$s5</option>
+                    <option value="$s6">$s6</option>
+                    <option value="$s7">$s7</option>
+                </select>
+                <input type="number" id="adduInputB">
+            </div>
+        </div>
         <button id="adduConfirmBtn" onclick="hidePopup()">Confirm</button>
 
         <!--======-->
@@ -142,10 +149,10 @@
     <div class="mainzone">
         <img src="images/MIPSdataIcon.png" id="currentAIcon">
         <img src="images/MIPSdataIcon.png" id="currentBIcon">
-        <img src ="images/MIPSdataIcon.png" id = "currentCIcon">
-        <img src = "images/MIPSincrementIcon.png" id = "incrementIcon">
+        <img src="images/MIPSdataIcon.png" id="currentCIcon">
+        <img src="images/MIPSincrementIcon.png" id="incrementIcon">
         <p id="infoBubble1"></p>
-        <p id = "infoBubble2"></p>
+        <p id="infoBubble2"></p>
         <!--Start of Invisible Boxes to Use as Locations of Nodes-->
         <div class="nodesMain">
             <div id="PCbox"></div>
@@ -154,7 +161,7 @@
             <div id="ADDbox_first"></div>
             <div id="MUXbox_first"></div>
             <div id="CTRLbox"></div>
-            <p id = "CTRLboxTEXT"></p>
+            <p id="CTRLboxTEXT"></p>
             <div id="RFbox"></div>
             <div id="SIGNEXDbox"></div>
             <div id="ALUCTRLbox"></div>
@@ -165,8 +172,8 @@
             <div id="MUDbox_third"></div>
             <div id="DMbox"></div>
             <div id="MUXbox_fourth"></div>
-            <div id = "SFTLFT2JUMPbox"></div>
-            <div id = "MUXbox_fifth"></div>
+            <div id="SFTLFT2JUMPbox"></div>
+            <div id="MUXbox_fifth"></div>
             <!--Start of Text Nodes-->
             <!--=========-->
             <!--for r type-->
@@ -175,11 +182,11 @@
             <p id="instr_20to16">Instruction [20-16]</p>
             <p id="instr_15to11">Instruction [15-11]</p>
             <p id="instr_15to0">Instruction [15-0]</p>
-            <p id = "instr_5to0">Instruction [5-0]</p>
+            <p id="instr_5to0">Instruction [5-0]</p>
             <!--for jump-->
-            <p id = "instr_25to0">Insrtruction [25-0]</p>
-            <p id = "pcplus4_31to28">PC+4 [31-28]</p>
-            <p id = "jumpadd_31to0">Jump Address [31-0]</p>
+            <p id="instr_25to0">Insrtruction [25-0]</p>
+            <p id="pcplus4_31to28">PC+4 [31-28]</p>
+            <p id="jumpadd_31to0">Jump Address [31-0]</p>
             <!--control text nodes-->
             <p id="jump_textCT">Jump</p>
             <p id="regdest_textCT">RegDst</p>
@@ -191,39 +198,39 @@
             <p id="alusrc_textCT">ALUSrc</p>
             <p id="regwrite_textCT">RegWrite</p>
             <!--START OF INSTRUCTION BLOCKS FOR VISUAL REPRESENTATION-->
-            <div class = "instruction_block_structure">
-                <p id = "opcode_block">123456</p>
-                <p id = "rs_block">12345</p>
-                <p id = "rt_block">12345</p>
-                <p id = "rd_block">12345</p>
-                <p id = "shamt_block">12345</p>
-                <p id = "func_block">12345</p>
+            <div class="instruction_block_structure">
+                <p id="opcode_block">123456</p>
+                <p id="rs_block">12345</p>
+                <p id="rt_block">12345</p>
+                <p id="rd_block">12345</p>
+                <p id="shamt_block">12345</p>
+                <p id="func_block">12345</p>
             </div>
             <!--Test Block-->
-            <p id ="test_block_special"></p>
-            <p id ="test_block_special2"></p>
+            <p id="test_block_special"></p>
+            <p id="test_block_special2"></p>
             <!--Test Block End-->
-            <div class = "value_blocks_postRF_read">
-                <p id = value_block_postRegister_1></p>
-                <p id = value_block_postRegister_2></p>
-                <p id = "value_block_totalval"></p>
-                <p id = "typeofoperation_ALUcontrol_block"></p>
+            <div class="value_blocks_postRF_read">
+                <p id=value_block_postRegister_1></p>
+                <p id=value_block_postRegister_2></p>
+                <p id="value_block_totalval"></p>
+                <p id="typeofoperation_ALUcontrol_block"></p>
             </div>
-            <div class = "tipsBoxCanvasContainer">
-                <p id = "tipsBox"></p>
-                <p id ="previousTipsBox"></p>
+            <div class="tipsBoxCanvasContainer">
+                <p id="tipsBox"></p>
+                <p id="previousTipsBox"></p>
             </div>
         </div>
         <div class="mainButtons">
-            <button id="startSIM"><img src = "images/playbutton.png" id = "startBtnImg"></button>
-            <button id="nextSim"><img src = "images/playbutton.png" id = "nextSimImg"></button>
-            <button id = "sim_3"><img src = "images/playbutton.png" id = "sim3Img"></button>
-            <button id = "sim_4"><img src = "images/playbutton.png" id = "sim4Img"></button>
-            <button id = "sim_5"><img src = "images/playbutton.png" id = "sim5Img"></button>
-            <button id = "sim_6"><img src = "images/playbutton.png" id = "sim6Img"></button>
-            <button id = "sim_7"><img src = "images/playbutton.png" id = "sim7Img"></button>
-            <button id = "sim_8"><img src = "images/playbutton.png" id = "sim8Img"></button>
-            <button id = "sim_9"><img src = "images/playbutton.png" id = "sim9Img"></button>
+            <button id="startSIM"><img src="images/playbutton.png" id="startBtnImg"></button>
+            <button id="nextSim"><img src="images/playbutton.png" id="nextSimImg"></button>
+            <button id="sim_3"><img src="images/playbutton.png" id="sim3Img"></button>
+            <button id="sim_4"><img src="images/playbutton.png" id="sim4Img"></button>
+            <button id="sim_5"><img src="images/playbutton.png" id="sim5Img"></button>
+            <button id="sim_6"><img src="images/playbutton.png" id="sim6Img"></button>
+            <button id="sim_7"><img src="images/playbutton.png" id="sim7Img"></button>
+            <button id="sim_8"><img src="images/playbutton.png" id="sim8Img"></button>
+            <button id="sim_9"><img src="images/playbutton.png" id="sim9Img"></button>
         </div>
         <img src="images/datapathCustom.png" id="THISIMFG">
     </div>

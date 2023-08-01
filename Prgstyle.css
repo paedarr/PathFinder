@@ -1,4 +1,4 @@
-.mainzone{
+.mainzone {
     width: 100%;
     display: block;
     margin: auto;
@@ -17,48 +17,75 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: yellow;
+    background-color: #1ebbd7;
     z-index: 999;
+    color: white;
+    font-family: mainFont;
+    border-radius: 5px;
+    padding: 5vw;
+    border: 3px solid lightslategray;
 
     /*CHANGE BACK WHEN DONE*/
     /*display: none;*/
-  }
-  
+}
 
-#popupContent{
+
+#popupContent {
     text-align: center;
     font-size: 1.3vw;
 }
 
-#hidePopupbtn{
+#hidePopupbtn {
+    display: block;
+    margin: auto;
+    font-size: 0.7vw;
+    text-decoration: none;
+    background-color: lightslategray;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+#confirmInitialChoice, #rtypeConfirm, #adduConfirmBtn, #itypeConfirm, #jtypeConfirm{
     display: block;
     margin: auto;
     font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
 }
 
-#THISIMFG{
+#confirmInitialChoice:hover, #rtypeConfirm:hover, #adduConfirmBtn:hover, #itypeConfirm:hover, #jtypeConfirm:hover{
+    background-color: #005073;
+    color: white;
+    cursor: pointer;
+}
+
+#THISIMFG {
     width: 100%;
     display: block;
     margin: auto;
     border: 1px maroon solid;
 }
 
-#confirmInitialChoice{
+#confirmInitialChoice {
     opacity: 1;
     z-index: 99;
 }
 
-#userInitialSelection{
+#userInitialSelection {
     opacity: 1;
     z-index: 99;
 }
 
-#UIS{
+#UIS {
     opacity: 1;
     z-index: 99;
 }
 
-#startSIM{
+#startSIM {
     display: block;
     position: absolute;
     z-index: 99;
@@ -74,18 +101,18 @@
     transition: 0.3s;
 }
 
-#startSIM:hover{
+#startSIM:hover {
     cursor: pointer;
     background-color: #189ad3;
 }
 
-#startBtnImg{
+#startBtnImg {
     display: block;
     width: 2vw;
     filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
-#nextSim{
+#nextSim {
     display: none;
     position: absolute;
     z-index: 99;
@@ -101,18 +128,18 @@
     transition: 0.3s;
 }
 
-#nextSim:hover{
+#nextSim:hover {
     cursor: pointer;
     background-color: #189ad3;
 }
 
-#nextSimImg{
+#nextSimImg {
     display: none;
     width: 2vw;
     filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
-#sim_3{
+#sim_3 {
     display: none;
     position: absolute;
     z-index: 99;
@@ -128,18 +155,18 @@
     transition: 0.3s;
 }
 
-#sim_3:hover{
+#sim_3:hover {
     cursor: pointer;
     background-color: #189ad3;
 }
 
-#sim3Img{
+#sim3Img {
     display: none;
     width: 2vw;
     filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
-#sim_4{
+#sim_4 {
     display: none;
     position: absolute;
     z-index: 99;
@@ -155,18 +182,18 @@
     transition: 0.3s;
 }
 
-#sim_4:hover{
+#sim_4:hover {
     cursor: pointer;
     background-color: #189ad3;
 }
 
-#sim4Img{
+#sim4Img {
     display: none;
     width: 2vw;
     filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
-#sim_5{
+#sim_5 {
     display: none;
     position: absolute;
     z-index: 99;
@@ -182,18 +209,18 @@
     transition: 0.3s;
 }
 
-#sim_5:hover{
+#sim_5:hover {
     cursor: pointer;
     background-color: #189ad3;
 }
 
-#sim5Img{
+#sim5Img {
     display: none;
     width: 2vw;
     filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
-#sim_6{
+#sim_6 {
     display: none;
     position: absolute;
     z-index: 99;
@@ -209,18 +236,18 @@
     transition: 0.3s;
 }
 
-#sim_6:hover{
+#sim_6:hover {
     cursor: pointer;
     background-color: #189ad3;
 }
 
-#sim6Img{
+#sim6Img {
     display: none;
     width: 2vw;
     filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
-#sim_7{
+#sim_7 {
     display: none;
     position: absolute;
     z-index: 99;
@@ -236,18 +263,18 @@
     transition: 0.3s;
 }
 
-#sim_7:hover{
+#sim_7:hover {
     cursor: pointer;
     background-color: #189ad3;
 }
 
-#sim7Img{
+#sim7Img {
     display: none;
     width: 2vw;
     filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
-#sim_8{
+#sim_8 {
     display: none;
     position: absolute;
     z-index: 99;
@@ -263,18 +290,18 @@
     transition: 0.3s;
 }
 
-#sim_8:hover{
+#sim_8:hover {
     cursor: pointer;
     background-color: #189ad3;
 }
 
-#sim8Img{
+#sim8Img {
     display: none;
     width: 2vw;
     filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
-#sim_9{
+#sim_9 {
     display: none;
     position: absolute;
     z-index: 99;
@@ -290,12 +317,12 @@
     transition: 0.3s;
 }
 
-#sim_9:hover{
+#sim_9:hover {
     cursor: pointer;
     background-color: #189ad3;
 }
 
-#sim9Img{
+#sim9Img {
     display: none;
     width: 2vw;
     filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
@@ -303,73 +330,101 @@
 
 /*Start of R Type Choices*/
 
-#rtypeChoiceTitle{
+#rtypeChoiceTitle {
     display: none;
 }
 
-#RtypeChoices{
+#RtypeChoices {
     display: none;
 }
 
-#rtypeConfirm{
+#rtypeConfirm {
     display: none;
+}
+
+.containRtypeRegistersALL{
+    display: inline-block;
+    width: 100%;
+}
+
+.containRTypeDestSelector{
+    display: flex;
+    margin: none;
+    justify-content: center;
+    width: 30%;
+    float: left;
+}
+
+.containRTypeFirstSelectors{
+    display: flex;
+    margin: none;
+    justify-content: center;
+    width: 30%;
+    float: left;
+}
+
+.containRTypeSecondSelectors{
+    display: flex;
+    margin: none;
+    justify-content: center;
+    width: 30%;
+    float: left;
 }
 
 
 
-
-#adduInputTitle{
+#adduInputTitle {
     display: none;
 }
 
-#adduInputA{
+#adduInputA {
     display: none;
 }
 
-#adduInputB{
+#adduInputB {
     display: none;
 }
 
-#adduConfirmBtn{
+#adduConfirmBtn {
     display: none;
 }
 
-#adduInputAregisters{
+#adduInputAregisters {
     display: none;
 }
 
-#adduInputBregisters{
+#adduInputBregisters {
     display: none;
 }
 
-#adduSourceRegisters{
+#adduSourceRegisters {
     display: none;
 }
 
 /*Start of I Type Choices*/
 
-#itypeChoiceTitle{
+#itypeChoiceTitle {
     display: none;
 }
 
-#ItypeChoices{
+#ItypeChoices {
     display: none;
 }
 
-#itypeConfirm{
+#itypeConfirm {
     display: none;
 }
 
 /*Start of J Type Choices*/
 
-#jtypeChoiceTitle{
+#jtypeChoiceTitle {
     display: none;
 }
 
-#JtypeChoices{
+#JtypeChoices {
     display: none;
 }
 
-#jtypeConfirm{
+#jtypeConfirm {
     display: none;
 }
