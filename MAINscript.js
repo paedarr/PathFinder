@@ -52,6 +52,8 @@ function Rinstruction() {
     var getType = document.getElementById("RtypeChoices");
     var chosenType = getType.value;
 
+/*++++++++++++++++++++++++++++++++++++++++++++*/
+
     if (chosenType == "add") {
 
         //MAKE SURE TO DIFFERENTIATE BETWEEN ADDU AND ADD, AND SUBU AND SUB
@@ -130,6 +132,9 @@ function Rinstruction() {
 
                 infoBubble1.style.display = "block";
                 startBtn.style.display = "none";
+                var startBtnImg = document.getElementById("startBtnImg");
+                startBtnImg.style.display = "none";
+
                 infoBubble1.style.animation = "move_first_bubble 1s ease-in-out forwards";
                 setTimeout(function () {
                     currentAIcon.style.animation = "first_move 5s ease-in-out forwards";
@@ -150,6 +155,8 @@ function Rinstruction() {
                             IMboxTEXT.style.animation = "IManimShowText 0.5s ease-in-out forwards";
                             placeholderTextContent = IMboxTEXT.textContent;
                             setTimeout(function(){
+                                var nextSimImg = document.getElementById("nextSimImg");
+                                nextSimImg.style.display = "block";
                                 nextBtn1.style.display = "block";
                         }, 1000);
                         }, 5000);
@@ -165,6 +172,8 @@ function Rinstruction() {
                     var IMboxTEXT = document.getElementById("IMboxTEXT");
                     IMboxTEXT.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     nextBtn1.style.display = "none";
+                    var nextSimImg = document.getElementById("nextSimImg");
+                    nextSimImg.style.display = "none";
                     rtypeIni("000000", typeABin, typeBBin, typeDestBin, "00000", "100001");
                     showInstructionBlocks();
                     tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control, which will tell the rest of the program what kind of instruction is to be evaluated.";
@@ -184,7 +193,9 @@ function Rinstruction() {
                         //-----------------------------------
                         setTimeout(function () {
                             var sim_3 = document.getElementById("sim_3");
+                            var sim3Img = document.getElementById("sim3Img");
                             sim_3.style.display = "block";
+                            sim3Img.style.display = "block";
                         }, 3000);
                     }, 2000);
                 });
@@ -192,6 +203,8 @@ function Rinstruction() {
                 sim_3.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_3.style.display = "none";
+                    var sim3Img = document.getElementById("sim3Img");
+                    sim3Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     setTimeout(function () {
@@ -207,6 +220,8 @@ function Rinstruction() {
                             setTimeout(function(){
                                 var sim_4 = document.getElementById("sim_4");
                                 sim_4.style.display = "block";
+                                var sim4Img = document.getElementById("sim4Img");
+                                sim4Img.style.display = "block";
                             }, 1500);
                         }, 3000);
                     }, 1000);
@@ -216,6 +231,8 @@ function Rinstruction() {
                 sim_4.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_4.style.display = "none";
+                    var sim4Img = document.getElementById("sim4Img");
+                    sim4Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -230,6 +247,8 @@ function Rinstruction() {
                         setTimeout(function(){
                             var sim_5 = document.getElementById("sim_5");
                             sim_5.style.display = "block";
+                            var sim5Img = document.getElementById("sim5Img");
+                            sim5Img.style.display = "block";
                         }, 2000);
                     }, 1000);
                 });
@@ -238,6 +257,8 @@ function Rinstruction() {
                 sim_5.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_5.style.display = "none";
+                    var sim5Img = document.getElementById("sim5Img");
+                    sim5Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -259,6 +280,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_6 = document.getElementById("sim_6");
                                     sim_6.style.display = "block";
+                                    var sim6Img = document.getElementById("sim6Img");
+                                    sim6Img.style.display = "block";
                                 }, 4500);
                             }, 500);
                         }, 4000);
@@ -269,6 +292,8 @@ function Rinstruction() {
                 sim_6.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_6.style.display = "none";
+                    var sim6Img = document.getElementById("sim6Img");
+                    sim6Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -291,6 +316,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_7 = document.getElementById("sim_7");
                                     sim_7.style.display = "block";
+                                    var sim7Img = document.getElementById("sim7Img");
+                                    sim7Img.style.display = "block";
                                 }, 4500);
                             }, 500);
                         }, 4000);
@@ -301,6 +328,8 @@ function Rinstruction() {
                 sim_7.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_7.style.display = "none";
+                    var sim7Img = document.getElementById("sim7Img");
+                    sim7Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -319,6 +348,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_8 = document.getElementById("sim_8");
                                     sim_8.style.display = "block";
+                                    var sim8Img = document.getElementById("sim8Img");
+                                    sim8Img.style.display = "block";
                                 }, 500);
                             }, 500);
                         }, 6000);
@@ -329,6 +360,8 @@ function Rinstruction() {
                 sim_8.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_8.style.display = "none";
+                    var sim8Img = document.getElementById("sim8Img");
+                    sim8Img.style.display = "none"; 
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -378,6 +411,8 @@ function Rinstruction() {
                                                         setTimeout(function(){
                                                             var sim_9 = document.getElementById("sim_9");
                                                             sim_9.style.display = "block";
+                                                            var sim9Img = document.getElementById("sim9Img");
+                                                            sim9Img.style.display = "block";  
                                                         }, 1000);
                                                     }, 500);
                                                 }, 500);
@@ -394,6 +429,8 @@ function Rinstruction() {
                 sim_9.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_9.style.display = "none";
+                    var sim9Img = document.getElementById("sim9Img");
+                    sim9Img.style.display = "none";  
                     currentCIcon.style.display = "block";
                     currentCIcon.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -438,6 +475,9 @@ function Rinstruction() {
             });
         });
     }
+
+/*++++++++++++++++++++++++++++++++++++++++++++*/
+
     else if (chosenType == "addu") {
         /*  ADDU FORMAT
         Opcode RS RT RD SHAMT FUNC
@@ -520,6 +560,8 @@ function Rinstruction() {
 
                 infoBubble1.style.display = "block";
                 startBtn.style.display = "none";
+                var startBtnImg = document.getElementById("startBtnImg");
+                startBtnImg.style.display = "none";
                 infoBubble1.style.animation = "move_first_bubble 1s ease-in-out forwards";
                 setTimeout(function () {
                     currentAIcon.style.animation = "first_move 5s ease-in-out forwards";
@@ -540,6 +582,8 @@ function Rinstruction() {
                             IMboxTEXT.style.animation = "IManimShowText 0.5s ease-in-out forwards";
                             placeholderTextContent = IMboxTEXT.textContent;
                             setTimeout(function(){
+                                var nextSimImg = document.getElementById("nextSimImg");
+                                nextSimImg.style.display = "block";
                                 nextBtn1.style.display = "block";
                         }, 1000);
                         }, 5000);
@@ -555,6 +599,8 @@ function Rinstruction() {
                     var IMboxTEXT = document.getElementById("IMboxTEXT");
                     IMboxTEXT.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     nextBtn1.style.display = "none";
+                    var nextSimImg = document.getElementById("nextSimImg");
+                    nextSimImg.style.display = "none";
                     rtypeIni("000000", typeABin, typeBBin, typeDestBin, "00000", "100001");
                     showInstructionBlocks();
                     tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control, which will tell the rest of the program what kind of instruction is to be evaluated.";
@@ -574,7 +620,9 @@ function Rinstruction() {
                         //-----------------------------------
                         setTimeout(function () {
                             var sim_3 = document.getElementById("sim_3");
+                            var sim3Img = document.getElementById("sim3Img");
                             sim_3.style.display = "block";
+                            sim3Img.style.display = "block";
                         }, 3000);
                     }, 2000);
                 });
@@ -582,6 +630,8 @@ function Rinstruction() {
                 sim_3.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_3.style.display = "none";
+                    var sim3Img = document.getElementById("sim3Img");
+                    sim3Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     setTimeout(function () {
@@ -597,6 +647,8 @@ function Rinstruction() {
                             setTimeout(function(){
                                 var sim_4 = document.getElementById("sim_4");
                                 sim_4.style.display = "block";
+                                var sim4Img = document.getElementById("sim4Img");
+                                sim4Img.style.display = "block";
                             }, 1500);
                         }, 3000);
                     }, 1000);
@@ -606,6 +658,8 @@ function Rinstruction() {
                 sim_4.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_4.style.display = "none";
+                    var sim4Img = document.getElementById("sim4Img");
+                    sim4Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -620,6 +674,8 @@ function Rinstruction() {
                         setTimeout(function(){
                             var sim_5 = document.getElementById("sim_5");
                             sim_5.style.display = "block";
+                            var sim5Img = document.getElementById("sim5Img");
+                            sim5Img.style.display = "block";
                         }, 2000);
                     }, 1000);
                 });
@@ -628,6 +684,8 @@ function Rinstruction() {
                 sim_5.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_5.style.display = "none";
+                    var sim5Img = document.getElementById("sim5Img");
+                    sim5Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -649,6 +707,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_6 = document.getElementById("sim_6");
                                     sim_6.style.display = "block";
+                                    var sim6Img = document.getElementById("sim6Img");
+                                    sim6Img.style.display = "block";
                                 }, 4500);
                             }, 500);
                         }, 4000);
@@ -659,6 +719,8 @@ function Rinstruction() {
                 sim_6.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_6.style.display = "none";
+                    var sim6Img = document.getElementById("sim6Img");
+                    sim6Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -681,6 +743,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_7 = document.getElementById("sim_7");
                                     sim_7.style.display = "block";
+                                    var sim7Img = document.getElementById("sim7Img");
+                                    sim7Img.style.display = "block";
                                 }, 4500);
                             }, 500);
                         }, 4000);
@@ -691,6 +755,8 @@ function Rinstruction() {
                 sim_7.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_7.style.display = "none";
+                    var sim7Img = document.getElementById("sim7Img");
+                    sim7Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -709,6 +775,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_8 = document.getElementById("sim_8");
                                     sim_8.style.display = "block";
+                                    var sim8Img = document.getElementById("sim8Img");
+                                    sim8Img.style.display = "block";
                                 }, 500);
                             }, 500);
                         }, 6000);
@@ -719,6 +787,8 @@ function Rinstruction() {
                 sim_8.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_8.style.display = "none";
+                    var sim8Img = document.getElementById("sim8Img");
+                    sim8Img.style.display = "none"; 
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -768,6 +838,8 @@ function Rinstruction() {
                                                         setTimeout(function(){
                                                             var sim_9 = document.getElementById("sim_9");
                                                             sim_9.style.display = "block";
+                                                            var sim9Img = document.getElementById("sim9Img");
+                                                            sim9Img.style.display = "block";  
                                                         }, 1000);
                                                     }, 500);
                                                 }, 500);
@@ -784,6 +856,8 @@ function Rinstruction() {
                 sim_9.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_9.style.display = "none";
+                    var sim9Img = document.getElementById("sim9Img");
+                    sim9Img.style.display = "none";  
                     currentCIcon.style.display = "block";
                     currentCIcon.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -910,6 +984,8 @@ function Rinstruction() {
 
                 infoBubble1.style.display = "block";
                 startBtn.style.display = "none";
+                var startBtnImg = document.getElementById("startBtnImg");
+                startBtnImg.style.display = "none";
                 infoBubble1.style.animation = "move_first_bubble 1s ease-in-out forwards";
                 setTimeout(function () {
                     currentAIcon.style.animation = "first_move 5s ease-in-out forwards";
@@ -930,6 +1006,8 @@ function Rinstruction() {
                             IMboxTEXT.style.animation = "IManimShowText 0.5s ease-in-out forwards";
                             placeholderTextContent = IMboxTEXT.textContent;
                             setTimeout(function(){
+                                var nextSimImg = document.getElementById("nextSimImg");
+                                nextSimImg.style.display = "block";
                                 nextBtn1.style.display = "block";
                         }, 1000);
                         }, 5000);
@@ -945,6 +1023,8 @@ function Rinstruction() {
                     var IMboxTEXT = document.getElementById("IMboxTEXT");
                     IMboxTEXT.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     nextBtn1.style.display = "none";
+                    var nextSimImg = document.getElementById("nextSimImg");
+                    nextSimImg.style.display = "none";
                     rtypeIni("000000", typeABin, typeBBin, typeDestBin, "00000", "100001");
                     showInstructionBlocks();
                     tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control, which will tell the rest of the program what kind of instruction is to be evaluated.";
@@ -964,7 +1044,9 @@ function Rinstruction() {
                         //-----------------------------------
                         setTimeout(function () {
                             var sim_3 = document.getElementById("sim_3");
+                            var sim3Img = document.getElementById("sim3Img");
                             sim_3.style.display = "block";
+                            sim3Img.style.display = "block";
                         }, 3000);
                     }, 2000);
                 });
@@ -972,6 +1054,8 @@ function Rinstruction() {
                 sim_3.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_3.style.display = "none";
+                    var sim3Img = document.getElementById("sim3Img");
+                    sim3Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     setTimeout(function () {
@@ -987,6 +1071,8 @@ function Rinstruction() {
                             setTimeout(function(){
                                 var sim_4 = document.getElementById("sim_4");
                                 sim_4.style.display = "block";
+                                var sim4Img = document.getElementById("sim4Img");
+                                sim4Img.style.display = "block";
                             }, 1500);
                         }, 3000);
                     }, 1000);
@@ -996,6 +1082,8 @@ function Rinstruction() {
                 sim_4.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_4.style.display = "none";
+                    var sim4Img = document.getElementById("sim4Img");
+                    sim4Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1010,6 +1098,8 @@ function Rinstruction() {
                         setTimeout(function(){
                             var sim_5 = document.getElementById("sim_5");
                             sim_5.style.display = "block";
+                            var sim5Img = document.getElementById("sim5Img");
+                            sim5Img.style.display = "block";
                         }, 2000);
                     }, 1000);
                 });
@@ -1018,6 +1108,8 @@ function Rinstruction() {
                 sim_5.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_5.style.display = "none";
+                    var sim5Img = document.getElementById("sim5Img");
+                    sim5Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1039,6 +1131,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_6 = document.getElementById("sim_6");
                                     sim_6.style.display = "block";
+                                    var sim6Img = document.getElementById("sim6Img");
+                                    sim6Img.style.display = "block";
                                 }, 4500);
                             }, 500);
                         }, 4000);
@@ -1049,6 +1143,8 @@ function Rinstruction() {
                 sim_6.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_6.style.display = "none";
+                    var sim6Img = document.getElementById("sim6Img");
+                    sim6Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1071,6 +1167,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_7 = document.getElementById("sim_7");
                                     sim_7.style.display = "block";
+                                    var sim7Img = document.getElementById("sim7Img");
+                                    sim7Img.style.display = "block";
                                 }, 4500);
                             }, 500);
                         }, 4000);
@@ -1081,6 +1179,8 @@ function Rinstruction() {
                 sim_7.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_7.style.display = "none";
+                    var sim7Img = document.getElementById("sim7Img");
+                    sim7Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1099,6 +1199,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_8 = document.getElementById("sim_8");
                                     sim_8.style.display = "block";
+                                    var sim8Img = document.getElementById("sim8Img");
+                                    sim8Img.style.display = "block";
                                 }, 500);
                             }, 500);
                         }, 6000);
@@ -1109,6 +1211,8 @@ function Rinstruction() {
                 sim_8.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_8.style.display = "none";
+                    var sim8Img = document.getElementById("sim8Img");
+                    sim8Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1158,6 +1262,8 @@ function Rinstruction() {
                                                         setTimeout(function(){
                                                             var sim_9 = document.getElementById("sim_9");
                                                             sim_9.style.display = "block";
+                                                            var sim9Img = document.getElementById("sim9Img");
+                                                            sim9Img.style.display = "block";  
                                                         }, 1000);
                                                     }, 500);
                                                 }, 500);
@@ -1174,6 +1280,8 @@ function Rinstruction() {
                 sim_9.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_9.style.display = "none";
+                    var sim9Img = document.getElementById("sim9Img");
+                    sim9Img.style.display = "none";  
                     currentCIcon.style.display = "block";
                     currentCIcon.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1220,6 +1328,8 @@ function Rinstruction() {
 
     }
     else if (chosenType == "subu") {
+
+        //DIFFERENTIATE BETWEEN SUBU AND SUB
 
         var hidePrevTitle = document.getElementById("rtypeChoiceTitle");
         var hidePrevChoices = document.getElementById("RtypeChoices");
@@ -1295,6 +1405,8 @@ function Rinstruction() {
 
                 infoBubble1.style.display = "block";
                 startBtn.style.display = "none";
+                var startBtnImg = document.getElementById("startBtnImg");
+                startBtnImg.style.display = "none";
                 infoBubble1.style.animation = "move_first_bubble 1s ease-in-out forwards";
                 setTimeout(function () {
                     currentAIcon.style.animation = "first_move 5s ease-in-out forwards";
@@ -1315,6 +1427,8 @@ function Rinstruction() {
                             IMboxTEXT.style.animation = "IManimShowText 0.5s ease-in-out forwards";
                             placeholderTextContent = IMboxTEXT.textContent;
                             setTimeout(function(){
+                                var nextSimImg = document.getElementById("nextSimImg");
+                                nextSimImg.style.display = "block";
                                 nextBtn1.style.display = "block";
                         }, 1000);
                         }, 5000);
@@ -1330,6 +1444,8 @@ function Rinstruction() {
                     var IMboxTEXT = document.getElementById("IMboxTEXT");
                     IMboxTEXT.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     nextBtn1.style.display = "none";
+                    var nextSimImg = document.getElementById("nextSimImg");
+                    nextSimImg.style.display = "none";
                     rtypeIni("000000", typeABin, typeBBin, typeDestBin, "00000", "100001");
                     showInstructionBlocks();
                     tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control, which will tell the rest of the program what kind of instruction is to be evaluated.";
@@ -1349,7 +1465,9 @@ function Rinstruction() {
                         //-----------------------------------
                         setTimeout(function () {
                             var sim_3 = document.getElementById("sim_3");
+                            var sim3Img = document.getElementById("sim3Img");
                             sim_3.style.display = "block";
+                            sim3Img.style.display = "block";
                         }, 3000);
                     }, 2000);
                 });
@@ -1357,6 +1475,8 @@ function Rinstruction() {
                 sim_3.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_3.style.display = "none";
+                    var sim3Img = document.getElementById("sim3Img");
+                    sim3Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     setTimeout(function () {
@@ -1372,6 +1492,8 @@ function Rinstruction() {
                             setTimeout(function(){
                                 var sim_4 = document.getElementById("sim_4");
                                 sim_4.style.display = "block";
+                                var sim4Img = document.getElementById("sim4Img");
+                                sim4Img.style.display = "block";
                             }, 1500);
                         }, 3000);
                     }, 1000);
@@ -1381,6 +1503,8 @@ function Rinstruction() {
                 sim_4.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_4.style.display = "none";
+                    var sim4Img = document.getElementById("sim4Img");
+                    sim4Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1395,6 +1519,8 @@ function Rinstruction() {
                         setTimeout(function(){
                             var sim_5 = document.getElementById("sim_5");
                             sim_5.style.display = "block";
+                            var sim5Img = document.getElementById("sim5Img");
+                            sim5Img.style.display = "block";
                         }, 2000);
                     }, 1000);
                 });
@@ -1403,6 +1529,8 @@ function Rinstruction() {
                 sim_5.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_5.style.display = "none";
+                    var sim5Img = document.getElementById("sim5Img");
+                    sim5Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1424,6 +1552,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_6 = document.getElementById("sim_6");
                                     sim_6.style.display = "block";
+                                    var sim6Img = document.getElementById("sim6Img");
+                                    sim6Img.style.display = "block";
                                 }, 4500);
                             }, 500);
                         }, 4000);
@@ -1434,6 +1564,8 @@ function Rinstruction() {
                 sim_6.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_6.style.display = "none";
+                    var sim6Img = document.getElementById("sim6Img");
+                    sim6Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1456,6 +1588,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_7 = document.getElementById("sim_7");
                                     sim_7.style.display = "block";
+                                    var sim7Img = document.getElementById("sim7Img");
+                                    sim7Img.style.display = "block";
                                 }, 4500);
                             }, 500);
                         }, 4000);
@@ -1466,6 +1600,8 @@ function Rinstruction() {
                 sim_7.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_7.style.display = "none";
+                    var sim7Img = document.getElementById("sim7Img");
+                    sim7Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1484,6 +1620,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_8 = document.getElementById("sim_8");
                                     sim_8.style.display = "block";
+                                    var sim8Img = document.getElementById("sim8Img");
+                                    sim8Img.style.display = "block";
                                 }, 500);
                             }, 500);
                         }, 6000);
@@ -1494,6 +1632,8 @@ function Rinstruction() {
                 sim_8.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_8.style.display = "none";
+                    var sim8Img = document.getElementById("sim8Img");
+                    sim8Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1543,6 +1683,8 @@ function Rinstruction() {
                                                         setTimeout(function(){
                                                             var sim_9 = document.getElementById("sim_9");
                                                             sim_9.style.display = "block";
+                                                            var sim9Img = document.getElementById("sim9Img");
+                                                            sim9Img.style.display = "block";  
                                                         }, 1000);
                                                     }, 500);
                                                 }, 500);
@@ -1559,6 +1701,8 @@ function Rinstruction() {
                 sim_9.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_9.style.display = "none";
+                    var sim9Img = document.getElementById("sim9Img");
+                    sim9Img.style.display = "none";  
                     currentCIcon.style.display = "block";
                     currentCIcon.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1702,6 +1846,8 @@ function Rinstruction() {
 
                 infoBubble1.style.display = "block";
                 startBtn.style.display = "none";
+                var startBtnImg = document.getElementById("startBtnImg");
+                startBtnImg.style.display = "none";
                 infoBubble1.style.animation = "move_first_bubble 1s ease-in-out forwards";
                 setTimeout(function () {
                     currentAIcon.style.animation = "first_move 5s ease-in-out forwards";
@@ -1722,6 +1868,8 @@ function Rinstruction() {
                             IMboxTEXT.style.animation = "IManimShowText 0.5s ease-in-out forwards";
                             placeholderTextContent = IMboxTEXT.textContent;
                             setTimeout(function(){
+                                var nextSimImg = document.getElementById("nextSimImg");
+                                nextSimImg.style.display = "block";
                                 nextBtn1.style.display = "block";
                         }, 1000);
                         }, 5000);
@@ -1737,6 +1885,8 @@ function Rinstruction() {
                     var IMboxTEXT = document.getElementById("IMboxTEXT");
                     IMboxTEXT.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     nextBtn1.style.display = "none";
+                    var nextSimImg = document.getElementById("nextSimImg");
+                    nextSimImg.style.display = "none";
                     rtypeIni("000000", typeABin, typeBBin, typeDestBin, "00000", "000100");
                     showInstructionBlocks();
                     tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control, which will tell the rest of the program what kind of instruction is to be evaluated.";
@@ -1756,7 +1906,9 @@ function Rinstruction() {
                         //-----------------------------------
                         setTimeout(function () {
                             var sim_3 = document.getElementById("sim_3");
+                            var sim3Img = document.getElementById("sim3Img");
                             sim_3.style.display = "block";
+                            sim3Img.style.display = "block";
                         }, 3000);
                     }, 2000);
                 });
@@ -1764,6 +1916,8 @@ function Rinstruction() {
                 sim_3.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_3.style.display = "none";
+                    var sim3Img = document.getElementById("sim3Img");
+                    sim3Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
                     setTimeout(function () {
@@ -1779,6 +1933,8 @@ function Rinstruction() {
                             setTimeout(function(){
                                 var sim_4 = document.getElementById("sim_4");
                                 sim_4.style.display = "block";
+                                var sim4Img = document.getElementById("sim4Img");
+                                sim4Img.style.display = "block";
                             }, 1500);
                         }, 3000);
                     }, 1000);
@@ -1788,6 +1944,8 @@ function Rinstruction() {
                 sim_4.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_4.style.display = "none";
+                    var sim4Img = document.getElementById("sim4Img");
+                    sim4Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1802,6 +1960,8 @@ function Rinstruction() {
                         setTimeout(function(){
                             var sim_5 = document.getElementById("sim_5");
                             sim_5.style.display = "block";
+                            var sim5Img = document.getElementById("sim5Img");
+                            sim5Img.style.display = "block";
                         }, 2000);
                     }, 1000);
                 });
@@ -1810,6 +1970,8 @@ function Rinstruction() {
                 sim_5.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_5.style.display = "none";
+                    var sim5Img = document.getElementById("sim5Img");
+                    sim5Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1831,6 +1993,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_6 = document.getElementById("sim_6");
                                     sim_6.style.display = "block";
+                                    var sim6Img = document.getElementById("sim6Img");
+                                    sim6Img.style.display = "block";
                                 }, 4500);
                             }, 500);
                         }, 4000);
@@ -1841,6 +2005,8 @@ function Rinstruction() {
                 sim_6.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_6.style.display = "none";
+                    var sim6Img = document.getElementById("sim6Img");
+                    sim6Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1863,6 +2029,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_7 = document.getElementById("sim_7");
                                     sim_7.style.display = "block";
+                                    var sim7Img = document.getElementById("sim7Img");
+                                    sim7Img.style.display = "block";
                                 }, 4500);
                             }, 500);
                         }, 4000);
@@ -1873,6 +2041,8 @@ function Rinstruction() {
                 sim_7.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_7.style.display = "none";
+                    var sim7Img = document.getElementById("sim7Img");
+                    sim7Img.style.display = "none";
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1891,6 +2061,8 @@ function Rinstruction() {
                                 setTimeout(function(){
                                     var sim_8 = document.getElementById("sim_8");
                                     sim_8.style.display = "block";
+                                    var sim8Img = document.getElementById("sim8Img");
+                                    sim8Img.style.display = "block";
                                 }, 500);
                             }, 500);
                         }, 6000);
@@ -1901,6 +2073,8 @@ function Rinstruction() {
                 sim_8.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_8.style.display = "none";
+                    var sim8Img = document.getElementById("sim8Img");
+                    sim8Img.style.display = "none"; 
                     var tipsBox = document.getElementById("tipsBox");
                     tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){
@@ -1951,6 +2125,8 @@ function Rinstruction() {
                                                         setTimeout(function(){
                                                             var sim_9 = document.getElementById("sim_9");
                                                             sim_9.style.display = "block";
+                                                            var sim9Img = document.getElementById("sim9Img");
+                                                            sim9Img.style.display = "block";  
                                                         }, 1000);
                                                     }, 500);
                                                 }, 500);
@@ -1967,6 +2143,8 @@ function Rinstruction() {
                 sim_9.addEventListener("click", function () {
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_9.style.display = "none";
+                    var sim9Img = document.getElementById("sim9Img");
+                    sim9Img.style.display = "none";  
                     currentCIcon.style.display = "block";
                     currentCIcon.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                     setTimeout(function(){

@@ -13,15 +13,16 @@
     <link rel="stylesheet" href="nodesStyling.css">
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="instructionBlockStyles.css">
+    <link rel="stylesheet" href="mainAnimations.css">
 </head>
 
 <body>
     <div class="banner">
-        <a href="index.html" class="bnrBtns">Home</a>
-        <a href="datapath.html" class="bnrBtns">Interactive Graph</a>
-        <a href="howto.html" class="bnrBtns">Guide</a>
-        <a href="mainProgram.html" class="bnrBtns">Datapath</a>
-        <a href="customProgram.html" class="bnrBtns">Custom</a>
+        <a href="index.html" class="bnrBtns"><img src="images/PathFinderLOGO.png" id="pathFinderBnrLogo"></a>
+        <a href="datapath.html" class="bnrBtns" id="bnrBtn1">Interactive Graph</a>
+        <a href="howto.html" class="bnrBtns" id="bnrBtn2">Guide</a>
+        <a href="mainProgram.html" class="bnrBtns" id="bnrBtn3">Datapath</a>
+        <a href="customProgram.html" class="bnrBtns" id="bnrBtn4">Custom</a>
     </div>
     <div class="popup" id="popup">
         <p id="popupContent"><b>Welcome to the Datpath Page</b><br>This is some placeholder text to be changed when
@@ -213,18 +214,18 @@
                 <p id ="previousTipsBox"></p>
             </div>
         </div>
+        <div class="mainButtons">
+            <button id="startSIM"><img src = "images/playbutton.png" id = "startBtnImg"></button>
+            <button id="nextSim"><img src = "images/playbutton.png" id = "nextSimImg"></button>
+            <button id = "sim_3"><img src = "images/playbutton.png" id = "sim3Img"></button>
+            <button id = "sim_4"><img src = "images/playbutton.png" id = "sim4Img"></button>
+            <button id = "sim_5"><img src = "images/playbutton.png" id = "sim5Img"></button>
+            <button id = "sim_6"><img src = "images/playbutton.png" id = "sim6Img"></button>
+            <button id = "sim_7"><img src = "images/playbutton.png" id = "sim7Img"></button>
+            <button id = "sim_8"><img src = "images/playbutton.png" id = "sim8Img"></button>
+            <button id = "sim_9"><img src = "images/playbutton.png" id = "sim9Img"></button>
+        </div>
         <img src="images/datapathCustom.png" id="THISIMFG">
-    </div>
-    <div class="mainButtons">
-        <button id="startSIM">Start</button>
-        <button id="nextSim">Next</button>
-        <button id = "sim_3">Next</button>
-        <button id = "sim_4">Next</button>
-        <button id = "sim_5">Next</button>
-        <button id = "sim_6">Next</button>
-        <button id = "sim_7">Next</button>
-        <button id = "sim_8">Next</button>
-        <button id = "sim_9">Next</button>
     </div>
     <script src="MAINscript.js"></script>
     <script src="checkRegisters.js"></script>

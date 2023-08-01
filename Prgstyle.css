@@ -58,51 +58,247 @@
     z-index: 99;
 }
 
+#startSIM{
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#startSIM:hover{
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#startBtnImg{
+    display: block;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
+}
+
 #nextSim{
     display: none;
-    margin: auto; 
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#nextSim:hover{
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#nextSimImg{
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
 #sim_3{
     display: none;
-    margin: auto;
-    background-color: red;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_3:hover{
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim3Img{
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
 #sim_4{
     display: none;
-    margin: auto;
-    background-color: green;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_4:hover{
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim4Img{
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
 #sim_5{
     display: none;
-    margin: auto;
-    background-color: aqua;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_5:hover{
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim5Img{
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
 #sim_6{
     display: none;
-    margin: auto;
-    background-color: orange;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_6:hover{
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim6Img{
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
 #sim_7{
     display: none;
-    margin: auto;
-    background-color: blue;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_7:hover{
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim7Img{
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
 #sim_8{
     display: none;
-    margin: auto;
-    background-color: purple;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_8:hover{
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim8Img{
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
 #sim_9{
     display: none;
-    margin: auto;
-    background-color: yellow;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_9:hover{
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim9Img{
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
 }
 
 /*Start of R Type Choices*/
