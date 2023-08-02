@@ -70,20 +70,6 @@
     border: 1px maroon solid;
 }
 
-#confirmInitialChoice {
-    opacity: 1;
-    z-index: 99;
-}
-
-#userInitialSelection {
-    opacity: 1;
-    z-index: 99;
-}
-
-#UIS {
-    opacity: 1;
-    z-index: 99;
-}
 
 #startSIM {
     display: block;
@@ -336,6 +322,13 @@
 
 #RtypeChoices {
     display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
 }
 
 #rtypeConfirm {
@@ -372,6 +365,45 @@
 }
 
 
+#confirmInitialChoice {
+    display: block;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#userInitialSelection {
+    display: block;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#UIS {
+    display: block;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#UIS:hover, #userInitialSelection:hover, #confirmInitialChoice:hover, #RtypeChoices:hover, #adduSourceRegisters:hover, #adduConfirmBtn:hover, #adduInputAregisters:hover, #adduInputBregisters:hover, #ItypeChoices:hover, #itypeConfirm:hover, #JtypeChoices:hover, #jtypeConfirm:hover{
+    background-color: #005073;
+    color: white;
+    cursor: pointer;
+}
+
 
 #adduInputTitle {
     display: none;
@@ -387,18 +419,46 @@
 
 #adduConfirmBtn {
     display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
 }
 
 #adduInputAregisters {
     display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
 }
 
 #adduInputBregisters {
     display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
 }
 
 #adduSourceRegisters {
     display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
 }
 
 /*Start of I Type Choices*/
@@ -409,10 +469,24 @@
 
 #ItypeChoices {
     display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
 }
 
 #itypeConfirm {
     display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
 }
 
 /*Start of J Type Choices*/
@@ -423,8 +497,22 @@
 
 #JtypeChoices {
     display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
 }
 
 #jtypeConfirm {
     display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
 }
