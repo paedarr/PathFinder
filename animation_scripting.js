@@ -19,6 +19,15 @@ function showInstructionBlocks(){
     funcBlock.style.animation = "item_show_opacity 1s ease-in-out forwards";
 }
 
+function showJInstructionBlocks(){
+    var opBlock = document.getElementById("opcode_block");
+    var rsBlock = document.getElementById("rs_block");
+    opBlock.style.display = "block";
+    rsBlock.style.display = "block";
+    opBlock.style.animation = "item_show_opacity 1s ease-in-out forwards";
+    rsBlock.style.animation = "item_show_opacity 1s ease-in-out forwards";
+}
+
 function moveBlocks_initial_rtype(){
     var opBlock = document.getElementById("opcode_block");
     var rsBlock = document.getElementById("rs_block");
@@ -32,4 +41,9 @@ function moveBlocks_initial_rtype(){
     rdBlock.style.animation = "moveRD_ini 2s ease-in-out forwards";
     shamtBlock.style.animation = "moveShamt_ini 2s ease-in-out forwards";
     funcBlock.style.animation = "moveFunc_ini 2s ease-in-out forwards";
+}
+
+function moveBlocks_initial_jtype(){
+    var opBlock = document.getElementById("opcode_block");
+    var rsBlock = document.getElementById("rs_block");
 }

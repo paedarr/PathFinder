@@ -24,8 +24,8 @@
         <a href="customProgram.html" class="bnrBtns" id="bnrBtn4">Custom</a>
     </div>
     <div class="popup" id="popup">
-        <p id="popupContent"><b>Welcome to the Datpath Page</b><br>This is some placeholder text to be changed when
-            there is a<br>suitable description for this page.</p>
+        <p id="popupContent"><b>Welcome to the Interactive Datpath Page</b><br>Please enter the desired instruction you would
+            like to perform.</p>
         <label for="userInitialSelection" id="UIS">Select Instruction Type:<br></label>
         <select name="userInitialSelection" id="userInitialSelection">
             <option value="Rtype">R-Type</option>
@@ -128,7 +128,7 @@
             <option value="lb">lb</option>
             <option value="lbu">lbu</option>
         </select>
-        <button id="itypeConfirm">Confirm</button>
+        <button id="itypeConfirm" onclick="hidePopup()">Confirm</button>
 
         <!--======-->
 
@@ -137,7 +137,7 @@
             <option value="j">j</option>
             <option value="jal">jal</option>
         </select>
-        <button id="jtypeConfirm">Confirm</button>
+        <button id="jtypeConfirm" onclick="hidePopup(); JInstruction();">Confirm</button>
 
 
         <button id="confirmInitialChoice" onclick="confirmFirstSelect()">Next</button>

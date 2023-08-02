@@ -12,3 +12,11 @@ function rtypeIni(opcode, rs, rt, rd, shamt, func){
     shamtBlock.textContent = shamt;
     funcBlock.textContent = func;
 }
+
+function jtypeIni(opcode, rs){
+    //rs is also known as the label
+    var opBlock = document.getElementById("opcode_block");
+    var rsBlock = document.getElementById("rs_block");
+    opBlock.textContent = opcode;
+    rsBlock.textContent = rs;
+}
