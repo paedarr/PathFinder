@@ -436,6 +436,8 @@ p#instr_25to0, p#pcplus4_31to28, p#jumpadd_31to0, p#regdest_textCT, p#jump_textC
 }
 
 
+
+/*LABEL INFO FOR USER*/
 #tipsBox{
     display: block;
     margin: 1%;

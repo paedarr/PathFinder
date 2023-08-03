@@ -8,7 +8,7 @@
 
 .popup {
     position: fixed;
-    width: 50vw;
+    width: 35vw;
     height: 30vh;
     top: 50%;
     left: 50%;
@@ -411,10 +411,12 @@
 
 #adduInputA {
     display: none;
+    width: 4vw;
 }
 
 #adduInputB {
     display: none;
+    width: 4vw;
 }
 
 #adduConfirmBtn {
