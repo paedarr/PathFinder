@@ -398,7 +398,7 @@
     transition: 0.3s;
 }
 
-#UIS:hover, #confirmInitialChoice:hover, #RtypeChoices:hover, #adduSourceRegisters:hover, #adduConfirmBtn:hover, #adduInputAregisters:hover, #adduInputBregisters:hover, #ItypeChoices:hover, #itypeConfirm:hover, #JtypeChoices:hover, #jtypeConfirm:hover{
+#userInitialSelection:hover, #confirmInitialChoice:hover, #RtypeChoices:hover, #adduSourceRegisters:hover, #adduConfirmBtn:hover, #adduInputAregisters:hover, #adduInputBregisters:hover, #ItypeChoices:hover, #itypeConfirm:hover, #JtypeChoices:hover, #jtypeConfirm:hover{
     background-color: #005073;
     color: white;
     cursor: pointer;
