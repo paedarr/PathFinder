@@ -1862,6 +1862,9 @@ function Rinstruction() {
 
     }
     else if (chosenType == "sllv") {
+
+        /*SLLV and SLL need serious adjustments to the way they proess the shift. Currently, it works when it's within the bounds
+        of the 32 bit number, but once outside and part of the number is outside of this bound, there are issues w/ the correctness of it*/
         var hidePrevTitle = document.getElementById("rtypeChoiceTitle");
         var hidePrevChoices = document.getElementById("RtypeChoices");
         var hideConfirmBox = document.getElementById("rtypeConfirm");
