@@ -465,3 +465,20 @@ p#instr_25to0, p#pcplus4_31to28, p#jumpadd_31to0, p#regdest_textCT, p#jump_textC
     border: 1px solid white;
     opacity: 0;
 }
+
+#DMboxTEXT{
+    font-family: mainFont;
+    position: absolute;
+    display: block;
+    font-size: 0.7vw;
+    background-color: #71c7ec;
+    border: 3px solid #005073;
+    border-radius: 5px;
+    padding: 0.3vw;
+    color: white;
+    top: 74.5%;
+    left: 74.3%;
+    width: 11%;
+    z-index: 99;
+    opacity: 0;
+}

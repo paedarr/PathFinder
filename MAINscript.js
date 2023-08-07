@@ -106,37 +106,37 @@ function JInstruction() {
                 }, 2700);
             }, 1000);
             var nextBtn1 = document.getElementById("nextSim");
-                nextBtn1.addEventListener("click", function () {
-                    previousTipsBox.textContent = placeholderTextContent;
-                    previousTipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
-                    var tipsBox = document.getElementById("tipsBox");
-                    var IMboxTEXT = document.getElementById("IMboxTEXT");
-                    IMboxTEXT.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
-                    nextBtn1.style.display = "none";
-                    var nextSimImg = document.getElementById("nextSimImg");
-                    nextSimImg.style.display = "none";
-                    //for now, j type instructions are static
-                    jtypeIni("000010", "00000000000000000000000011");
-                    showJInstructionBlocks(); // MAKE SURE TO GO BACK AND ALTER THE SIZING OF THE BLOCKS 
-                    tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control, which will tell the rest of the program what kind of instruction is to be evaluated.";
-                    tipsBox.style.animation = "showTipsBox 0.5s ease-in-out forwards";
-                    placeholderTextContent = tipsBox.textContent;
+            nextBtn1.addEventListener("click", function () {
+                previousTipsBox.textContent = placeholderTextContent;
+                previousTipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                var tipsBox = document.getElementById("tipsBox");
+                var IMboxTEXT = document.getElementById("IMboxTEXT");
+                IMboxTEXT.style.animation = "item_disappear_opacity 1s ease-in-out forwards";
+                nextBtn1.style.display = "none";
+                var nextSimImg = document.getElementById("nextSimImg");
+                nextSimImg.style.display = "none";
+                //for now, j type instructions are static
+                jtypeIni("000010", "00000000000000000000000011");
+                showJInstructionBlocks(); // MAKE SURE TO GO BACK AND ALTER THE SIZING OF THE BLOCKS 
+                tipsBox.textContent = "The IM then sends the instruction forward in the datapath to be evaluated by the Control, which will tell the rest of the program what kind of instruction is to be evaluated.";
+                tipsBox.style.animation = "showTipsBox 0.5s ease-in-out forwards";
+                placeholderTextContent = tipsBox.textContent;
+                setTimeout(function () {
+                    var IMinfo = document.getElementById("IMbox");
+                    IMinfo.style.animation = "hide_opacity_fromhalf 0.5s ease-in-out forwards";
+                    moveBlocks_initial_rtype();
+                    //This Activated Text is for ADDU R type -----
+                    var activatedText1 = activateText(document.getElementById("instr_32to26"));
+                    var activatedText2 = activateText(document.getElementById("instr_25to0"));
+                    //-----------------------------------
                     setTimeout(function () {
-                        var IMinfo = document.getElementById("IMbox");
-                        IMinfo.style.animation = "hide_opacity_fromhalf 0.5s ease-in-out forwards";
-                        moveBlocks_initial_rtype();
-                        //This Activated Text is for ADDU R type -----
-                        var activatedText1 = activateText(document.getElementById("instr_32to26"));
-                        var activatedText2 = activateText(document.getElementById("instr_25to0"));
-                        //-----------------------------------
-                        setTimeout(function () {
-                            var sim_3 = document.getElementById("sim_3");
-                            var sim3Img = document.getElementById("sim3Img");
-                            sim_3.style.display = "block";
-                            sim3Img.style.display = "block";
-                        }, 3000);
-                    }, 2000);
-                });
+                        var sim_3 = document.getElementById("sim_3");
+                        var sim3Img = document.getElementById("sim3Img");
+                        sim_3.style.display = "block";
+                        sim3Img.style.display = "block";
+                    }, 3000);
+                }, 2000);
+            });
         });
 
     }
@@ -412,9 +412,22 @@ function Rinstruction() {
                                 value_block_postRegister_2.style.display = "block";
                                 value_block_postRegister_2.style.animation = "item_show_opacity 1s ease-in-out forwards";
                                 value_block_postRegister_2.style.animation = "move_valueblock2_ini 4s ease-in-out forwards";
+                                //logic for splitoff block + DM block info1
+                                var value_block_postReg_2_SPLITOFF_toDM = document.getElementById("value_block_postReg_2_SPLITOFF_toDM");
+                                value_block_postReg_2_SPLITOFF_toDM.textContent = value_block_postRegister_2.textContent;
+                                value_block_postReg_2_SPLITOFF_toDM.style.display = "block";
+                                value_block_postReg_2_SPLITOFF_toDM.style.animation = "move_splitoff_value2_block 4s ease-in-out forwards";
+                                //end logic for splitoff block + DM block info1
                                 tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                 placeholderTextContent = tipsBox.textContent;
                                 setTimeout(function () {
+                                    //start of dm box + text show
+                                    var DMbox = document.getElementById("DMbox");
+                                    var DMboxTEXT = document.getElementById("DMboxTEXT");
+                                    DMboxTEXT.textContent = "Since neither 'MemWrite' nor the 'MemRead' lines are activated via the Control, the DM does not read/write anything. Also the MUX that the 'Read Data' line flows into is set to zero, as the Control didn't activate the 'MemToReg' path.";
+                                    DMbox.style.animation = "highlight_DMbox 0.5s ease-in-out forwards";
+                                    DMboxTEXT.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                    //end of dm box + text show
                                     var sim_7 = document.getElementById("sim_7");
                                     sim_7.style.display = "block";
                                     var sim7Img = document.getElementById("sim7Img");
@@ -427,6 +440,12 @@ function Rinstruction() {
 
                 var sim_7 = document.getElementById("sim_7");
                 sim_7.addEventListener("click", function () {
+                    //dm box + text disappear start
+                    var DMbox = document.getElementById("DMbox");
+                    var DMboxTEXT = document.getElementById("DMboxTEXT");
+                    DMbox.style.animation = "disappear_DMbox_highlight 0.5s ease-in-out forwards";
+                    DMboxTEXT.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
+                    //dm box + text disappear end
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_7.style.display = "none";
                     var sim7Img = document.getElementById("sim7Img");
@@ -842,6 +861,13 @@ function Rinstruction() {
                                 tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                 placeholderTextContent = tipsBox.textContent;
                                 setTimeout(function () {
+                                    //start of dm box + text show
+                                    var DMbox = document.getElementById("DMbox");
+                                    var DMboxTEXT = document.getElementById("DMboxTEXT");
+                                    DMboxTEXT.textContent = "Since neither 'MemWrite' nor the 'MemRead' lines are activated via the Control, the DM does not read/write anything. Also the MUX that the 'Read Data' line flows into is set to zero, as the Control didn't activate the 'MemToReg' path.";
+                                    DMbox.style.animation = "highlight_DMbox 0.5s ease-in-out forwards";
+                                    DMboxTEXT.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                    //end of dm box + text show
                                     var sim_7 = document.getElementById("sim_7");
                                     sim_7.style.display = "block";
                                     var sim7Img = document.getElementById("sim7Img");
@@ -854,6 +880,12 @@ function Rinstruction() {
 
                 var sim_7 = document.getElementById("sim_7");
                 sim_7.addEventListener("click", function () {
+                    //dm box + text disappear start
+                    var DMbox = document.getElementById("DMbox");
+                    var DMboxTEXT = document.getElementById("DMboxTEXT");
+                    DMbox.style.animation = "disappear_DMbox_highlight 0.5s ease-in-out forwards";
+                    DMboxTEXT.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
+                    //dm box + text disappear end
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_7.style.display = "none";
                     var sim7Img = document.getElementById("sim7Img");
@@ -1266,6 +1298,13 @@ function Rinstruction() {
                                 tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                 placeholderTextContent = tipsBox.textContent;
                                 setTimeout(function () {
+                                    //start of dm box + text show
+                                    var DMbox = document.getElementById("DMbox");
+                                    var DMboxTEXT = document.getElementById("DMboxTEXT");
+                                    DMboxTEXT.textContent = "Since neither 'MemWrite' nor the 'MemRead' lines are activated via the Control, the DM does not read/write anything. Also the MUX that the 'Read Data' line flows into is set to zero, as the Control didn't activate the 'MemToReg' path.";
+                                    DMbox.style.animation = "highlight_DMbox 0.5s ease-in-out forwards";
+                                    DMboxTEXT.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                    //end of dm box + text show
                                     var sim_7 = document.getElementById("sim_7");
                                     sim_7.style.display = "block";
                                     var sim7Img = document.getElementById("sim7Img");
@@ -1278,6 +1317,12 @@ function Rinstruction() {
 
                 var sim_7 = document.getElementById("sim_7");
                 sim_7.addEventListener("click", function () {
+                    //dm box + text disappear start
+                    var DMbox = document.getElementById("DMbox");
+                    var DMboxTEXT = document.getElementById("DMboxTEXT");
+                    DMbox.style.animation = "disappear_DMbox_highlight 0.5s ease-in-out forwards";
+                    DMboxTEXT.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
+                    //dm box + text disappear end
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_7.style.display = "none";
                     var sim7Img = document.getElementById("sim7Img");
@@ -1687,6 +1732,13 @@ function Rinstruction() {
                                 tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                 placeholderTextContent = tipsBox.textContent;
                                 setTimeout(function () {
+                                    //start of dm box + text show
+                                    var DMbox = document.getElementById("DMbox");
+                                    var DMboxTEXT = document.getElementById("DMboxTEXT");
+                                    DMboxTEXT.textContent = "Since neither 'MemWrite' nor the 'MemRead' lines are activated via the Control, the DM does not read/write anything. Also the MUX that the 'Read Data' line flows into is set to zero, as the Control didn't activate the 'MemToReg' path.";
+                                    DMbox.style.animation = "highlight_DMbox 0.5s ease-in-out forwards";
+                                    DMboxTEXT.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                    //end of dm box + text show
                                     var sim_7 = document.getElementById("sim_7");
                                     sim_7.style.display = "block";
                                     var sim7Img = document.getElementById("sim7Img");
@@ -1699,6 +1751,12 @@ function Rinstruction() {
 
                 var sim_7 = document.getElementById("sim_7");
                 sim_7.addEventListener("click", function () {
+                    //dm box + text disappear start
+                    var DMbox = document.getElementById("DMbox");
+                    var DMboxTEXT = document.getElementById("DMboxTEXT");
+                    DMbox.style.animation = "disappear_DMbox_highlight 0.5s ease-in-out forwards";
+                    DMboxTEXT.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
+                    //dm box + text disappear end
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_7.style.display = "none";
                     var sim7Img = document.getElementById("sim7Img");
@@ -2132,6 +2190,13 @@ function Rinstruction() {
                                 tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                 placeholderTextContent = tipsBox.textContent;
                                 setTimeout(function () {
+                                    //start of dm box + text show
+                                    var DMbox = document.getElementById("DMbox");
+                                    var DMboxTEXT = document.getElementById("DMboxTEXT");
+                                    DMboxTEXT.textContent = "Since neither 'MemWrite' nor the 'MemRead' lines are activated via the Control, the DM does not read/write anything. Also the MUX that the 'Read Data' line flows into is set to zero, as the Control didn't activate the 'MemToReg' path.";
+                                    DMbox.style.animation = "highlight_DMbox 0.5s ease-in-out forwards";
+                                    DMboxTEXT.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
+                                    //end of dm box + text show
                                     var sim_7 = document.getElementById("sim_7");
                                     sim_7.style.display = "block";
                                     var sim7Img = document.getElementById("sim7Img");
@@ -2144,6 +2209,12 @@ function Rinstruction() {
 
                 var sim_7 = document.getElementById("sim_7");
                 sim_7.addEventListener("click", function () {
+                    //dm box + text disappear start
+                    var DMbox = document.getElementById("DMbox");
+                    var DMboxTEXT = document.getElementById("DMboxTEXT");
+                    DMbox.style.animation = "disappear_DMbox_highlight 0.5s ease-in-out forwards";
+                    DMboxTEXT.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
+                    //dm box + text disappear end
                     previousTipsBox.textContent = placeholderTextContent;
                     sim_7.style.display = "none";
                     var sim7Img = document.getElementById("sim7Img");

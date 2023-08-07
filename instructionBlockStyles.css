@@ -77,6 +77,23 @@
     top: 57%;
 }
 
+#value_block_postReg_2_SPLITOFF_toDM{
+    display: none;
+    position: absolute;
+    background-color: rgba(197, 144, 144, 0.8);
+    padding: 0.2vw;
+    border: 0.2vw solid black;
+    color: purple;
+    z-index: 99;
+    font-family: mainFont;
+    text-align: center;
+    font-size: 0.9vw;
+    opacity: 0;
+    /*------*/
+    left: 58.5%;
+    top: 57%;
+}
+
 #typeofoperation_ALUcontrol_block{
     display: none;
     position: absolute;

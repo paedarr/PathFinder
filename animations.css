@@ -145,6 +145,28 @@
     }
 }
 
+@keyframes highlight_DMbox{
+    from{
+        background-color: none;
+        opacity: 0;
+    }
+    to{
+        background-color: goldenrod;
+        opacity: 0.3;
+    }
+}
+
+@keyframes disappear_DMbox_highlight{
+    from{
+        background-color: goldenrod;
+        opacity: 0.3;
+    }
+    to{
+        background-color: none;
+        opacity: 0;
+    }
+}
+
 /*Instruction Block Movements*/
 
 @keyframes moveOpcode_ini{
@@ -277,6 +299,7 @@
     }
 }
 
+
 @keyframes move_valueblock2_ini{
     0%{
         left: 58%;
@@ -306,6 +329,42 @@
     100%{   
         left: 67.3%;
         top: 65.5%;
+    }
+}
+
+@keyframes move_splitoff_value2_block{
+    0%{
+        left: 58.5%;
+        top: 57%;
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+        left: 58.5%;
+        top: 57%;
+    }
+    25%{
+        left: 58.5%;
+        top: 76.5%;
+        opacity: 1;
+    }
+    50%{
+        left: 62.7%;
+        top: 76.5%;
+        opacity: 1;
+    }
+    75%{
+        left: 62.7%;
+        top: 87.5%;
+        opacity: 1;
+    }
+    97%{
+        opacity: 1;
+    }
+    100%{
+        left: 76%;
+        top: 87.5%;
+        opacity: 0;
     }
 }
 
