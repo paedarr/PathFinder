@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "outDir": "./dist/js",
-    "strict": true,
-    "module": "es2015",
-    "target": "es5",
-    "moduleResolution": "node"
-  }
-}
