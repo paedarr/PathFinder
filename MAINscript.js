@@ -858,6 +858,12 @@ function Rinstruction() {
                                 value_block_postRegister_2.style.display = "block";
                                 value_block_postRegister_2.style.animation = "item_show_opacity 1s ease-in-out forwards";
                                 value_block_postRegister_2.style.animation = "move_valueblock2_ini 4s ease-in-out forwards";
+                                //logic for splitoff block + DM block info1
+                                var value_block_postReg_2_SPLITOFF_toDM = document.getElementById("value_block_postReg_2_SPLITOFF_toDM");
+                                value_block_postReg_2_SPLITOFF_toDM.textContent = value_block_postRegister_2.textContent;
+                                value_block_postReg_2_SPLITOFF_toDM.style.display = "block";
+                                value_block_postReg_2_SPLITOFF_toDM.style.animation = "move_splitoff_value2_block 4s ease-in-out forwards";
+                                //end logic for splitoff block + DM block info1
                                 tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                 placeholderTextContent = tipsBox.textContent;
                                 setTimeout(function () {
@@ -1295,6 +1301,12 @@ function Rinstruction() {
                                 value_block_postRegister_2.style.display = "block";
                                 value_block_postRegister_2.style.animation = "item_show_opacity 1s ease-in-out forwards";
                                 value_block_postRegister_2.style.animation = "move_valueblock2_ini 4s ease-in-out forwards";
+                                //logic for splitoff block + DM block info1
+                                var value_block_postReg_2_SPLITOFF_toDM = document.getElementById("value_block_postReg_2_SPLITOFF_toDM");
+                                value_block_postReg_2_SPLITOFF_toDM.textContent = value_block_postRegister_2.textContent;
+                                value_block_postReg_2_SPLITOFF_toDM.style.display = "block";
+                                value_block_postReg_2_SPLITOFF_toDM.style.animation = "move_splitoff_value2_block 4s ease-in-out forwards";
+                                //end logic for splitoff block + DM block info1
                                 tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                 placeholderTextContent = tipsBox.textContent;
                                 setTimeout(function () {
@@ -1729,6 +1741,12 @@ function Rinstruction() {
                                 value_block_postRegister_2.style.display = "block";
                                 value_block_postRegister_2.style.animation = "item_show_opacity 1s ease-in-out forwards";
                                 value_block_postRegister_2.style.animation = "move_valueblock2_ini 4s ease-in-out forwards";
+                                //logic for splitoff block + DM block info1
+                                var value_block_postReg_2_SPLITOFF_toDM = document.getElementById("value_block_postReg_2_SPLITOFF_toDM");
+                                value_block_postReg_2_SPLITOFF_toDM.textContent = value_block_postRegister_2.textContent;
+                                value_block_postReg_2_SPLITOFF_toDM.style.display = "block";
+                                value_block_postReg_2_SPLITOFF_toDM.style.animation = "move_splitoff_value2_block 4s ease-in-out forwards";
+                                //end logic for splitoff block + DM block info1
                                 tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                 placeholderTextContent = tipsBox.textContent;
                                 setTimeout(function () {
@@ -2198,6 +2216,12 @@ function Rinstruction() {
                                 value_block_postRegister_2.style.display = "block";
                                 value_block_postRegister_2.style.animation = "item_show_opacity 1s ease-in-out forwards";
                                 value_block_postRegister_2.style.animation = "move_valueblock2_ini 4s ease-in-out forwards";
+                                //logic for splitoff block + DM block info1
+                                var value_block_postReg_2_SPLITOFF_toDM = document.getElementById("value_block_postReg_2_SPLITOFF_toDM");
+                                value_block_postReg_2_SPLITOFF_toDM.textContent = value_block_postRegister_2.textContent;
+                                value_block_postReg_2_SPLITOFF_toDM.style.display = "block";
+                                value_block_postReg_2_SPLITOFF_toDM.style.animation = "move_splitoff_value2_block 4s ease-in-out forwards";
+                                //end logic for splitoff block + DM block info1
                                 tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                 placeholderTextContent = tipsBox.textContent;
                                 setTimeout(function () {
