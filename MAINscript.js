@@ -3,6 +3,7 @@ var inputA, inputB, typeA, typeB, locRegister;
 function hidePopup() {
     var popup = document.getElementById("popup");
     popup.style.opacity = 0;
+    popup.style.zIndex = -99;
 }
 
 
