@@ -43,7 +43,12 @@
                 li $v0, 10       # Load the syscall code for program exit (10) into $v0
                 syscall         # Execute the system call to exit the program
         </div>
+        <div class = "assemblerResultContainer" id = "results_from_editor">
+            <p id = "text_results_from_assembler"></p>
+        </div>
         <script src= "ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src = "fetch_results_from_directory.js"></script>
+        <script src = "mipsAssemblerFiles/mips-assembler-2.0.1/dist/js/src/assembler.js"></script>
         <script>
             var editor = ace.edit("editor");
             editor.setTheme("ace/theme/twilight");
