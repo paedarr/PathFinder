@@ -1968,10 +1968,21 @@ function Rinstruction() {
             inputA = inputA;
             inputB = inputB;
 
-            //STRING ISSUE HERE for SLLV
-            var totalInputResult = (inputA << inputB).toString(2).padStart(32, '0');
+            var binaryResult;
 
-            console.log("Binary Num:" + totalInputResult);
+            //STRING ISSUE HERE for SLLV
+            //var totalInputResult = (inputA << input).toString(2).padStart(31, '0');
+            if (inputB >= 32){
+                binaryResult = "0".padStart(32, '0');
+                console.log("Over 32 bin num:" + binaryResult);
+            }
+            else{
+                var result_beforeAdjust = inputA << inputB;
+                binaryResult = (result_beforeAdjust >>> 0).toString(2).padStart(32, '0');
+                console.log("Binary Num:" + binaryResult);
+            }
+
+            //the zero present is bc it is 32 bits, but only 31 can be shifted
 
             var value_block_postRegister_1 = document.getElementById("value_block_postRegister_1");
             var value_block_postRegister_2 = document.getElementById("value_block_postRegister_2");
@@ -2270,7 +2281,7 @@ function Rinstruction() {
                                 tipsBox.style.animation = "item_disappear_opacity 0.5s ease-in-out forwards";
                                 setTimeout(function () {
                                     previousTipsBox.textContent = placeholderTextContent;
-                                    tipsBox.textContent = "Now that the ALU knows what kind of operation to perform, it can execute the instruction on the provided values. Since the result is in binary, it is too large to fit into the box. The number is represented by '~Bin'. The binary number after shifting is: '" + totalInputResult + "'.";
+                                    tipsBox.textContent = "Now that the ALU knows what kind of operation to perform, it can execute the instruction on the provided values. Since the result is in binary, it is too large to fit into the box. The number is represented by '~Bin'. The binary number after shifting is: '" + binaryResult + "'.";
                                     tipsBox.style.animation = "item_show_opacity 0.5s ease-in-out forwards";
                                     placeholderTextContent = tipsBox.textContent;
                                     setTimeout(function () {
