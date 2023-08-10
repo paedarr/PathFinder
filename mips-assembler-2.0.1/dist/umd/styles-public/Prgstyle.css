@@ -1,0 +1,520 @@
+.mainzone {
+    width: 100%;
+    display: block;
+    margin: auto;
+    background-color: white;
+    position: relative;
+}
+
+.popup {
+    position: fixed;
+    width: 35vw;
+    height: 30vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1ebbd7;
+    z-index: 999;
+    color: white;
+    font-family: mainFont;
+    border-radius: 5px;
+    padding: 5vw;
+    border: 3px solid lightslategray;
+
+    /*CHANGE BACK WHEN DONE*/
+    /*display: none;*/
+}
+
+
+#popupContent {
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+#hidePopupbtn {
+    display: block;
+    margin: auto;
+    font-size: 0.7vw;
+    text-decoration: none;
+    background-color: lightslategray;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+#confirmInitialChoice, #rtypeConfirm, #adduConfirmBtn, #itypeConfirm, #jtypeConfirm{
+    display: block;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#confirmInitialChoice:hover, #rtypeConfirm:hover, #adduConfirmBtn:hover, #itypeConfirm:hover, #jtypeConfirm:hover{
+    background-color: #005073;
+    color: white;
+    cursor: pointer;
+}
+
+#THISIMFG {
+    width: 100%;
+    display: block;
+    margin: auto;
+    border: 1px maroon solid;
+}
+
+
+#startSIM {
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#startSIM:hover {
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#startBtnImg {
+    display: block;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
+}
+
+#nextSim {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#nextSim:hover {
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#nextSimImg {
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
+}
+
+#sim_3 {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_3:hover {
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim3Img {
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
+}
+
+#sim_4 {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_4:hover {
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim4Img {
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
+}
+
+#sim_5 {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_5:hover {
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim5Img {
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
+}
+
+#sim_6 {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_6:hover {
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim6Img {
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
+}
+
+#sim_7 {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_7:hover {
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim7Img {
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
+}
+
+#sim_8 {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_8:hover {
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim8Img {
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
+}
+
+#sim_9 {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 85%;
+    left: 30.2%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border: 1px solid lightslategray;
+    background-color: #107dac;
+    transition: 0.3s;
+}
+
+#sim_9:hover {
+    cursor: pointer;
+    background-color: #189ad3;
+}
+
+#sim9Img {
+    display: none;
+    width: 2vw;
+    filter: invert(78%) sepia(5%) saturate(4283%) hue-rotate(167deg) brightness(97%) contrast(91%);
+}
+
+/*Start of R Type Choices*/
+
+#rtypeChoiceTitle {
+    display: none;
+}
+
+#RtypeChoices {
+    display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#rtypeConfirm {
+    display: none;
+}
+
+.containRtypeRegistersALL{
+    display: inline-block;
+    width: 100%;
+}
+
+.containRTypeDestSelector{
+    display: flex;
+    margin: none;
+    justify-content: center;
+    width: 30%;
+    float: left;
+}
+
+.containRTypeFirstSelectors{
+    display: flex;
+    margin: none;
+    justify-content: center;
+    width: 30%;
+    float: left;
+}
+
+.containRTypeSecondSelectors{
+    display: flex;
+    margin: none;
+    justify-content: center;
+    width: 30%;
+    float: left;
+}
+
+
+#confirmInitialChoice {
+    display: block;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#userInitialSelection {
+    display: block;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#UIS {
+    display: block;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#userInitialSelection:hover, #confirmInitialChoice:hover, #RtypeChoices:hover, #adduSourceRegisters:hover, #adduConfirmBtn:hover, #adduInputAregisters:hover, #adduInputBregisters:hover, #ItypeChoices:hover, #itypeConfirm:hover, #JtypeChoices:hover, #jtypeConfirm:hover{
+    background-color: #005073;
+    color: white;
+    cursor: pointer;
+}
+
+
+#adduInputTitle {
+    display: none;
+}
+
+#adduInputA {
+    display: none;
+    width: 4vw;
+}
+
+#adduInputB {
+    display: none;
+    width: 4vw;
+}
+
+#adduConfirmBtn {
+    display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#adduInputAregisters {
+    display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#adduInputBregisters {
+    display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#adduSourceRegisters {
+    display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+/*Start of I Type Choices*/
+
+#itypeChoiceTitle {
+    display: none;
+}
+
+#ItypeChoices {
+    display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#itypeConfirm {
+    display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+/*Start of J Type Choices*/
+
+#jtypeChoiceTitle {
+    display: none;
+}
+
+#JtypeChoices {
+    display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+#jtypeConfirm {
+    display: none;
+    margin: auto;
+    font-size: 1vw;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}

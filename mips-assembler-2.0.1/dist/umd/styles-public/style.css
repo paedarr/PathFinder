@@ -1,0 +1,55 @@
+@font-face {
+    font-family: mainFont;
+    src: url(IBM_Plex_Sans/IBMPlexSans-Regular.ttf);
+  }
+
+body{
+    width: 100%;
+    background-color:#005073;
+    font: mainFont;
+    margin: auto;
+}
+
+.banner{
+    border-bottom: #107dac 2px solid;
+    font-family: mainFont;
+    padding: 0.5vw;
+    margin: none;
+    display: block;
+    position: relative;
+    text-align: left;
+    padding-bottom: 1vh;
+    background-color: #005073;
+}
+
+#pathFinderBnrLogo{
+    display: inline-block;
+    width: 15vw;
+    transition: 0.3s;
+    padding-left: 1vw;
+}
+
+#pathFinderBnrLogo:hover{
+    width: 15.5vw;
+}
+
+.bnrBtns{
+    text-decoration: none;
+    color: white;
+    margin-right: 5vw;
+    padding: 0.3vw;
+    font-size: 1.3vw;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.bnrBtns:hover{
+    font-size: 1.4vw;
+    color: #71c7ec;
+}
+
+#bnrBtn1, #bnrBtn2, #bnrBtn3, #bnrBtn4{
+    text-decoration: none;
+    position: relative;
+    bottom: 6vh;
+}
